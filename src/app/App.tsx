@@ -1,19 +1,18 @@
-import './styles/index.scss';
-import { useTheme } from 'app/providers/ThemeProvider';
-import { classNames } from 'shared/lib';
-import { AppRouter } from './providers/router';
-import { Navbar } from 'widgets/Navbar';
+import "./styles/index.scss";
+import { useTheme } from "app/providers/ThemeProvider";
+import { classNames } from "shared/lib";
+import { AppRouter } from "./providers/router";
+import { Navbar } from "widgets/Navbar";
 
 const App = () => {
-  const {theme, toggleTheme} = useTheme();
+  const { theme } = useTheme();
 
   return (
-    <div className={classNames('app', {}, [theme])}>
-      <Navbar/>
-      <AppRouter/>
-      <button onClick={toggleTheme}>Toggle theme</button>
+    <div className={classNames("app", {}, [theme])}>
+      <Navbar />
+      <AppRouter />
     </div>
-  )
-}
+  );
+};
 
 export default App;
