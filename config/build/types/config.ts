@@ -18,3 +18,8 @@ export interface BuildEnv {
   mode: BuildMode;
   port: number;
 }
+
+export enum Locales {
+  EN = "en",
+  UA = "ua",
+}
