@@ -1,4 +1,4 @@
-export type BuildMode = "production" | "development";
+export type BuildMode = 'production' | 'development';
 
 export interface BuildPaths {
   entry: string;
@@ -20,6 +20,6 @@ export interface BuildEnv {
 }
 
 export enum Locales {
-  EN = "en",
-  UA = "ua",
+  EN = 'en',
+  UA = 'ua',
 }
