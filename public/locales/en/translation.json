@@ -1,5 +1,7 @@
 {
     "language": "English",
     "navbar_mainPage_link_text": "Main page",
-    "navbar_aboutPage_link_text": "About page"
+    "navbar_aboutPage_link_text": "About page",
+    "sidebar_toggle_btn": "toggle",
+    "loading_text": "Loading..."
 }

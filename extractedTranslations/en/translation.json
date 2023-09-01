@@ -1,7 +1,9 @@
 {
   "about": "about",
   "language": "language",
+  "loading_text": "loading_text",
   "main": "main",
   "navbar_aboutPage_link_text": "navbar_aboutPage_link_text",
-  "navbar_mainPage_link_text": "navbar_mainPage_link_text"
+  "navbar_mainPage_link_text": "navbar_mainPage_link_text",
+  "sidebar_toggle_btn": "sidebar_toggle_btn"
 }

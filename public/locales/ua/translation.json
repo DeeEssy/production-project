@@ -1,5 +1,7 @@
 {
     "language": "Українська",
     "navbar_mainPage_link_text": "Головна сторiнка",
-    "navbar_aboutPage_link_text": "О нас"
+    "navbar_aboutPage_link_text": "О нас",
+    "sidebar_toggle_btn": "Переключити",
+    "loading_text": "Загрузка..."
 }
