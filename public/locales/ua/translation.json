@@ -3,5 +3,6 @@
     "navbar_mainPage_link_text": "Головна сторiнка",
     "navbar_aboutPage_link_text": "О нас",
     "sidebar_toggle_btn": "Переключити",
-    "loading_text": "Загрузка..."
+    "loading_text": "Загрузка...",
+    "not_found_page": "Сторiнку не знайдено"
 }

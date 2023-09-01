@@ -5,5 +5,6 @@
   "main": "main",
   "navbar_aboutPage_link_text": "navbar_aboutPage_link_text",
   "navbar_mainPage_link_text": "navbar_mainPage_link_text",
+  "not_found_page": "not_found_page",
   "sidebar_toggle_btn": "sidebar_toggle_btn"
 }
