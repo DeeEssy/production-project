@@ -1,5 +1,7 @@
 {
   "about": "about",
+  "error_block_btn": "error_block_btn",
+  "error_block_text": "error_block_text",
   "language": "language",
   "loading_text": "loading_text",
   "main": "main",

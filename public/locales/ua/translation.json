@@ -4,5 +4,7 @@
     "navbar_aboutPage_link_text": "О нас",
     "sidebar_toggle_btn": "Переключити",
     "loading_text": "Загрузка...",
-    "not_found_page": "Сторiнку не знайдено"
+    "not_found_page": "Сторiнку не знайдено",
+    "error_block_text": "Щось пiйшло не так",
+    "error_block_btn": "Оновити сторiнку"
 }
