@@ -6,9 +6,10 @@ import cls from './LanguageSwitcher.module.scss';
 
 interface LanguageSwitcherProps {
   className?: string;
+  short?: boolean;
 }
 
-export const LanguageSwitcher = ({ className }: LanguageSwitcherProps) => {
+export const LanguageSwitcher = ({ className, short }: LanguageSwitcherProps) => {
   const { t, i18n } = useTranslation();
 
   const toggleLanguage = () => {
@@ -21,7 +22,7 @@ export const LanguageSwitcher = ({ className }: LanguageSwitcherProps) => {
       onClick={toggleLanguage}
       theme={ThemeButton.CLEAR}
     >
-      {t('language')}
+      {short ? i18n.language.toUpperCase() : t('language')}
     </Button>
   );
 };
