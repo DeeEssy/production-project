@@ -19,6 +19,8 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Install modules
         run: npm install
+      - name: Build production
+        run: npm run build:prod
       - name: Linting TypeScript
         run: npm run lint:ts
       - name: Linting SCSS
@@ -29,5 +31,3 @@ jobs:
         run: npm run storybook:build
       - name: Screenshot testing
         run: npm run test:ui:ci
-      - name: Build production
-        run: npm run build:prod
