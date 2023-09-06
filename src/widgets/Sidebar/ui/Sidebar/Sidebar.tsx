@@ -30,6 +30,7 @@ export function Sidebar({ className }: SidebarProps) {
         <LanguageSwitcher className={classNames(cls.languageSwitcher)} />
       </div>
       <Button data-testid="sidebar-toggle" onClick={onToggle}>{t('sidebar_toggle_btn')}</Button>
+      {/* <div></div> */}
     </div>
   );
 }
