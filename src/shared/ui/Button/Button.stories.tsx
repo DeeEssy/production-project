@@ -31,12 +31,11 @@ Clear.args = {
   theme: ThemeButton.CLEAR,
 };
 
-export const ClearDark = Template.bind({});
-ClearDark.args = {
+export const ClearInverted = Template.bind({});
+ClearInverted.args = {
   children: 'Text',
-  theme: ThemeButton.CLEAR,
+  theme: ThemeButton.CLEAR_INVERTED,
 };
-ClearDark.decorators = [ThemeDecorator(Theme.DARK)];
 
 export const Outline = Template.bind({});
 Outline.args = {
@@ -44,38 +43,17 @@ Outline.args = {
   theme: ThemeButton.OUTLINE,
 };
 
-export const OutlineDark = Template.bind({});
-OutlineDark.args = {
-  children: 'Text',
-  theme: ThemeButton.OUTLINE,
-};
-OutlineDark.decorators = [ThemeDecorator(Theme.DARK)];
-
 export const Background = Template.bind({});
 Background.args = {
   children: 'Text',
   theme: ThemeButton.BACKGROUND,
 };
 
-export const BackgroundDark = Template.bind({});
-BackgroundDark.args = {
-  children: 'Text',
-  theme: ThemeButton.BACKGROUND,
-};
-BackgroundDark.decorators = [ThemeDecorator(Theme.DARK)];
-
 export const BackgroundInverted = Template.bind({});
 BackgroundInverted.args = {
   children: 'Text',
   theme: ThemeButton.BACKGROUND_INVERTED,
 };
-
-export const BackgroundInvertedDark = Template.bind({});
-BackgroundInvertedDark.args = {
-  children: 'Text',
-  theme: ThemeButton.BACKGROUND_INVERTED,
-};
-BackgroundInvertedDark.decorators = [ThemeDecorator(Theme.DARK)];
 
 export const Square = Template.bind({});
 Square.args = {

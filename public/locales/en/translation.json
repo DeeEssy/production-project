@@ -6,5 +6,6 @@
     "loading_text": "Loading...",
     "not_found_page": "Page not found",
     "error_block_text": "Something went wrong",
-    "error_block_btn": "Reload the page"
+    "error_block_btn": "Reload the page",
+    "enter": "Enter"
 }

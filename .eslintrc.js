@@ -13,7 +13,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['react', '@typescript-eslint', 'i18next'],
+  plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks'],
   rules: {
     'react/jsx-indent': [2, 2],
     'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.tsx', '.ts'] }],
@@ -32,6 +32,11 @@ module.exports = {
     'no-underscore-dangle': 0,
     'i18next/no-literal-string': [2, { markupOnly: true, ignoreAttribute: ['data-testid'] }],
     'max-len': [2, { ignoreComments: true, code: 100 }],
+    'jsx-a11y/no-static-element-interactions': 0,
+    'jsx-a11y/click-events-have-key-events': 0,
+    'jsx-a11y/no-noninteractive-tabindex': 0,
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'error',
   },
   globals: {
     __IS_DEV__: true,
