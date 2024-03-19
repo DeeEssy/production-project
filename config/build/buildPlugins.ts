@@ -24,6 +24,7 @@ export function buildPlugins({
   ];
 
   if (isDev) {
+    // default port for bundle analyzer during dev mode: 8888
     plugins.push(new BundleAnalyzerPlugin({
       openAnalyzer: false,
     }));
