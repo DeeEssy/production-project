@@ -8,6 +8,7 @@ import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import AboutPageIcon from 'shared/assets/icons/about-20-20.svg';
 import MainPageIcon from 'shared/assets/icons/main-20-20.svg';
+import { Counter } from 'entities/Counter/ui/Counter';
 import cls from './Sidebar.module.scss';
 
 interface SidebarProps {
@@ -29,6 +30,7 @@ export function Sidebar({ className }: SidebarProps) {
         [className],
       )}
     >
+      <Counter />
       <div className={cls.items}>
         <AppLink
           className={cls.item}
