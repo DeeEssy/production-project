@@ -7,5 +7,7 @@
     "not_found_page": "Сторiнку не знайдено",
     "error_block_text": "Щось пiйшло не так",
     "error_block_btn": "Оновити сторiнку",
-    "enter": "Увiйти"
+    "enter": "Увiйти",
+    "enter_username": "Введiть юзернейм",
+    "enter_password": "Введiть пароль"
 }

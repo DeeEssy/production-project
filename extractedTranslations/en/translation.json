@@ -1,6 +1,8 @@
 {
   "about": "about",
   "enter": "enter",
+  "enter_password": "enter_password",
+  "enter_username": "enter_username",
   "error_block_btn": "error_block_btn",
   "error_block_text": "error_block_text",
   "language": "language",
