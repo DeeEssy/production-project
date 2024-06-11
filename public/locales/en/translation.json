@@ -9,5 +9,8 @@
     "error_block_btn": "Reload the page",
     "enter": "Enter",
     "enter_username": "Enter username",
-    "enter_password": "Enter password"
+    "enter_password": "Enter password",
+    "login_form": "Login form",
+    "error.wrong_username_or_password": "Wrong username or password",
+    "logout": "Logout"
 }

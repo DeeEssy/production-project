@@ -9,5 +9,8 @@
     "error_block_btn": "Оновити сторiнку",
     "enter": "Увiйти",
     "enter_username": "Введiть юзернейм",
-    "enter_password": "Введiть пароль"
+    "enter_password": "Введiть пароль",
+    "login_form": "Логiн форма",
+    "error.wrong_username_or_password": "Неправильний юзернейм або пароль",
+    "logout": "Вийти"
 }

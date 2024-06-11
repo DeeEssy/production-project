@@ -3,13 +3,19 @@
   "enter": "enter",
   "enter_password": "enter_password",
   "enter_username": "enter_username",
+  "error": {
+    "wrong_username_or_password": "wrong_username_or_password"
+  },
   "error_block_btn": "error_block_btn",
   "error_block_text": "error_block_text",
   "language": "language",
   "loading_text": "loading_text",
+  "login_form": "login_form",
+  "logout": "",
   "main": "main",
   "navbar_aboutPage_link_text": "navbar_aboutPage_link_text",
   "navbar_mainPage_link_text": "navbar_mainPage_link_text",
   "not_found_page": "not_found_page",
-  "sidebar_toggle_btn": "sidebar_toggle_btn"
+  "sidebar_toggle_btn": "sidebar_toggle_btn",
+  "Вы ввели неверный логин или пароль": "Вы ввели неверный логин или пароль"
 }

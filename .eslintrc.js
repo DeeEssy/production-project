@@ -31,7 +31,7 @@ module.exports = {
     'import/no-extraneous-dependencies': 0,
     'no-underscore-dangle': 0,
     'i18next/no-literal-string': [2, { markupOnly: true, ignoreAttribute: ['data-testid'] }],
-    'max-len': [2, { ignoreComments: true, code: 100 }],
+    'max-len': [2, { ignoreComments: true, code: 120 }],
     'jsx-a11y/no-static-element-interactions': 0,
     'jsx-a11y/click-events-have-key-events': 0,
     'jsx-a11y/no-noninteractive-tabindex': 0,
