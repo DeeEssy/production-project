@@ -45,7 +45,7 @@ const LoginForm = memo(({ className }: LoginFormProps) => {
 
   return (
     <DynamicModuleLoader reducers={initialReducers}>
-      <div
+      <form
         className={classNames(cls.loginForm, {}, [className])}
       >
         <Text title={t('login_form')} />
@@ -71,7 +71,7 @@ const LoginForm = memo(({ className }: LoginFormProps) => {
         >
           {t('enter')}
         </Button>
-      </div>
+      </form>
     </DynamicModuleLoader>
   );
 });
