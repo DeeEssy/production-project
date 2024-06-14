@@ -1,7 +1,8 @@
 {
     "language": "English",
-    "navbar_mainPage_link_text": "Main page",
-    "navbar_aboutPage_link_text": "About page",
+    "sidebar_mainPage_link_text": "Main page",
+    "sidebar_aboutPage_link_text": "About page",
+    "sidebar_profilePage_link_text": "Profile page",
     "sidebar_toggle_btn": "toggle",
     "loading_text": "Loading...",
     "not_found_page": "Page not found",

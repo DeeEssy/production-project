@@ -19,7 +19,7 @@ export interface BuildEnv {
   port: number;
 }
 
-export enum Locales {
+export enum Locale {
   EN = 'en',
   UA = 'ua',
 }

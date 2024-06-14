@@ -3,14 +3,14 @@ import { initReactI18next } from 'react-i18next';
 
 import Backend from 'i18next-http-backend';
 import LanguageDetector from 'i18next-browser-languagedetector';
-import { Locales } from './locales';
+import { Locale } from './locales';
 
 i18n
   .use(Backend)
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    fallbackLng: Locales.EN,
+    fallbackLng: Locale.EN,
     debug: __IS_DEV__,
 
     interpolation: {

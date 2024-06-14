@@ -1,5 +1,5 @@
 import webpack from 'webpack';
-import { BuildOptions, Locales } from './types/config';
+import { BuildOptions, Locale } from './types/config';
 import { buildCssLoader } from './loaders/buildCssLoader';
 
 export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
@@ -35,7 +35,7 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
         plugins: [
           [
             'i18next-extract',
-            { locales: [Locales.EN, Locales.UA], keyAsDefaultValue: true },
+            { locales: [Locale.EN, Locale.UA], keyAsDefaultValue: true },
           ],
         ],
       },

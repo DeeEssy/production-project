@@ -25,5 +25,14 @@
       "password": "admin"
     }
   ],
-  "profile": { "name": "typicode" }
+  "profile": {
+    "first": "Dmytro",
+    "lastname": "Shevchenko",
+    "age": 22,
+    "currency": "UAH",
+    "country": "Ukraine",
+    "city": "Lviv",
+    "username": "admin",
+    "avatar": "https://cdn.pixabay.com/photo/2016/08/12/08/01/door-1587863_1280.jpg"
+  }
 }

@@ -1,12 +1,12 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
-import { Locales } from './locales';
+import { Locale } from './locales';
 
 i18n
   .use(initReactI18next)
   .init({
-    lng: Locales.EN,
-    fallbackLng: Locales.EN,
+    lng: Locale.EN,
+    fallbackLng: Locale.EN,
     debug: false,
 
     interpolation: {
