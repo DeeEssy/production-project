@@ -22,7 +22,9 @@ Primary.decorators = [StoreDecorator({
 export const withError = Template.bind({});
 withError.args = {};
 withError.decorators = [StoreDecorator({
-  loginForm: { username: '123', password: 'asd', error: 'ERROR' },
+  loginForm: {
+    username: '123', password: 'asd', error: 'ERROR',
+  },
 })];
 
 export const Loading = Template.bind({});

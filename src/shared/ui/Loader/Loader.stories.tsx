@@ -15,14 +15,6 @@ export default {
 const Template: ComponentStory<typeof Loader> = (args) => <Loader {...args} />;
 
 export const Light = Template.bind({});
-Light.args = {
-  children: 'Text',
-  theme: Light.OUTLINE,
-};
 
 export const Dark = Template.bind({});
-Dark.args = {
-  children: 'Text',
-  theme: Dark.OUTLINE,
-};
 Dark.decorators = [ThemeDecorator(Theme.DARK)];

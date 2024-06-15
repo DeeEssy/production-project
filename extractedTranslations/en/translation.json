@@ -1,5 +1,6 @@
 {
   "about": "about",
+  "edit": "edit",
   "enter": "enter",
   "enter_password": "enter_password",
   "enter_username": "enter_username",
@@ -17,6 +18,9 @@
   "navbar_mainPage_link_text": "navbar_mainPage_link_text",
   "navbar_profilePage_link_text": "navbar_profilePage_link_text",
   "not_found_page": "not_found_page",
+  "profile": "profile",
   "sidebar_toggle_btn": "sidebar_toggle_btn",
+  "your_firstname": "your_firstname",
+  "your_lastname": "your_lastname",
   "Вы ввели неверный логин или пароль": "Вы ввели неверный логин или пароль"
 }

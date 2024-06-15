@@ -27,7 +27,7 @@ export const Modal: FC<ModalProps> = (props) => {
 
   const [isClosing, setIsClosing] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
-  const timerRef = useRef<ReturnType<typeof setTimeout>>();
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const { theme } = useTheme();
 
   const onContentClick = (e: React.MouseEvent) => {
