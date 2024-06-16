@@ -1,6 +1,14 @@
 {
     "profile": "Profile",
     "edit": "Edit",
+    "undo": "Undo",
+    "save": "Save",
     "your_firstname": "Your firstname",
-    "your_lastname": "Your lastname"
+    "your_lastname": "Your lastname",
+    "your_age": "Your age",
+    "your_city": "Your city",
+    "your_avatar": "Your avatar",
+    "your_username": "Your username",
+    "error_downloading_profile": "Error occurs during profile downloading",
+    "error_try_reload_page": "Try to reload the page"
 }

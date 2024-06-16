@@ -13,5 +13,7 @@
     "enter_password": "Enter password",
     "login_form": "Login form",
     "error.wrong_username_or_password": "Wrong username or password",
-    "logout": "Logout"
+    "logout": "Logout",
+    "your_currency": "Your currency",
+    "your_country": "Your country"
 }

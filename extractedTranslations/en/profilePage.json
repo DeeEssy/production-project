@@ -1,6 +1,14 @@
 {
   "edit": "edit",
+  "error_downloading_profile": "",
+  "error_try_reload_page": "",
   "profile": "profile",
+  "save": "",
+  "undo": "",
+  "your_age": "",
+  "your_avatar": "",
+  "your_city": "",
   "your_firstname": "your_firstname",
-  "your_lastname": "your_lastname"
+  "your_lastname": "your_lastname",
+  "your_username": ""
 }

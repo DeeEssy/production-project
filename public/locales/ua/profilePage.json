@@ -1,6 +1,14 @@
 {
     "profile": "Профiль",
     "edit": "Редагувати",
+    "undo": "Вiдмiнити",
+    "save": "Зберегти",
     "your_firstname": "Ваше ім'я",
-    "your_lastname": "Ваше прiзвище"
+    "your_lastname": "Ваше прiзвище",
+    "your_age": "Ваш вiк",
+    "your_city": "Ваше мiсто",
+    "your_avatar": "Ваш аватар",
+    "your_username": "Ваш юзернейм",
+    "error_downloading_profile": "Виникла помилка при загрузцi профилю",
+    "error_try_reload_page": "Спробуйте перезавантажити сторiнку"
 }
