@@ -3,14 +3,20 @@ import {
   profileActions,
   getProfileReadonly,
   getProfileForm,
+  getProfileValidateErrors,
+  ValidateProfileError,
 } from 'entities/Profile';
 
-import { memo, useCallback, useEffect } from 'react';
+import {
+  memo, useCallback, useEffect, useMemo,
+} from 'react';
 import { useSelector } from 'react-redux';
 import { DynamicModuleLoader, ReducerList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { Currency } from 'entities/Currency';
 import { Country } from 'entities/Country';
+import { Text, TextTheme } from 'shared/ui/Text/Text';
+import { useTranslation } from 'react-i18next';
 import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader';
 
 const initialReducers: ReducerList = {
@@ -18,11 +24,25 @@ const initialReducers: ReducerList = {
 };
 
 const ProfilePage = memo(() => {
+  const { t } = useTranslation('profilePage');
   const dispatch = useAppDispatch();
   const profileForm = useSelector(getProfileForm);
   const profileIsLoading = useSelector(getProfileIsLoading);
   const profileError = useSelector(getProfileError);
   const profileReadonly = useSelector(getProfileReadonly);
+  const profileValidateErrors = useSelector(getProfileValidateErrors);
+
+  const validateErrorTranslations = useMemo(() => ({
+    [ValidateProfileError.INCORRECT_AGE]: t('error_incorrect_age'),
+    [ValidateProfileError.INCORRECT_COUNTRY]: t('error_incorrect_country'),
+    [ValidateProfileError.INCORRECT_USER_DATA]: t('error_user_data'),
+    [ValidateProfileError.NO_DATA]: t('error_no_data'),
+    [ValidateProfileError.SERVER_ERROR]: t('error_server_error'),
+    [ValidateProfileError.INCORRECT_CURRENCY]: t('error_incorrect_currency'),
+    [ValidateProfileError.INCORRECT_CITY]: t('error_incorrect_city'),
+    [ValidateProfileError.INCORRECT_USERNAME]: t('error_incorrect_username'),
+    [ValidateProfileError.INCORRECT_AVATAR]: t('error_incorrect_avatar'),
+  }), [t]);
 
   useEffect(() => {
     dispatch(fetchProfileData());
@@ -60,9 +80,23 @@ const ProfilePage = memo(() => {
     dispatch(profileActions.updateProfile({ country: value as Country }));
   }, [dispatch]);
 
+  const validateErrors = useMemo(() => {
+    if (profileValidateErrors?.length) {
+      return profileValidateErrors.map((error) => (
+        <Text
+          key={error}
+          theme={TextTheme.ERROR}
+          text={validateErrorTranslations[error]}
+        />
+      ));
+    }
+    return null;
+  }, [profileValidateErrors, validateErrorTranslations]);
+
   return (
     <DynamicModuleLoader reducers={initialReducers}>
       <ProfilePageHeader />
+      {validateErrors}
       <ProfileCard
         data={profileForm}
         isLoading={profileIsLoading}

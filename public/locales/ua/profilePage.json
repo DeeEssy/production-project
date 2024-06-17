@@ -10,5 +10,14 @@
     "your_avatar": "Ваш аватар",
     "your_username": "Ваш юзернейм",
     "error_downloading_profile": "Виникла помилка при загрузцi профилю",
-    "error_try_reload_page": "Спробуйте перезавантажити сторiнку"
+    "error_try_reload_page": "Спробуйте перезавантажити сторiнку",
+    "error_incorrect_age": "Некоректний вiк",
+    "error_user_data": "Iм'я та прiзвище обов'язкові",
+    "error_incorrect_country": "Країна обов'язкова",
+    "error_server_error": "Щось пiйшло не так",
+    "error_no_data": "Заповнiть усi поля",
+    "error_incorrect_currency": "Валюта обов'язкова",
+    "error_incorrect_city": "Мiсто обов'язкове",
+    "error_incorrect_username": "Юзернейм обов'язковий",
+    "error_incorrect_avatar": "Аватар обов'язковий"
 }

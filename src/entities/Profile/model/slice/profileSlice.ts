@@ -23,6 +23,7 @@ const profileSlice = createSlice({
     },
     cancelEdit: (state) => {
       state.readonly = true;
+      state.validateErrors = undefined;
       state.form = state.data;
     },
   },
@@ -43,7 +44,7 @@ const profileSlice = createSlice({
       })
 
       .addCase(updateProfileData.pending, (state) => {
-        state.error = undefined;
+        state.validateErrors = undefined;
         state.isLoading = true;
       })
       .addCase(updateProfileData.fulfilled, (state, action: PayloadAction<Profile>) => {
@@ -53,7 +54,7 @@ const profileSlice = createSlice({
         state.readonly = true;
       })
       .addCase(updateProfileData.rejected, (state, action) => {
-        state.error = action.payload;
+        state.validateErrors = action.payload;
         state.isLoading = false;
       });
   },

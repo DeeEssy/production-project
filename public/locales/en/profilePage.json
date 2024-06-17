@@ -10,5 +10,14 @@
     "your_avatar": "Your avatar",
     "your_username": "Your username",
     "error_downloading_profile": "Error occurs during profile downloading",
-    "error_try_reload_page": "Try to reload the page"
+    "error_try_reload_page": "Try to reload the page",
+    "error_incorrect_age": "Incorrect age",
+    "error_user_data": "Firstname and lastname are required",
+    "error_incorrect_country": "Country is required",
+    "error_server_error": "Something goes wrong",
+    "error_no_data": "Fill the fields",
+    "error_incorrect_currency": "Incorrect currency",
+    "error_incorrect_city": "City is required",
+    "error_incorrect_username": "Username is required",
+    "error_incorrect_avatar": "Avatar is required"
 }
