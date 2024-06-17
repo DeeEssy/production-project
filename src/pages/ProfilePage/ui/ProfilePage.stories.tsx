@@ -4,6 +4,7 @@ import { Theme } from 'app/providers/ThemeProvider';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 import { Currency } from 'entities/Currency';
 import { Country } from 'entities/Country';
+import avatar from 'shared/assets/tests/storybook.jpg';
 import ProfilePage from './ProfilePage';
 
 const profileData = {
@@ -14,7 +15,7 @@ const profileData = {
   country: Country.Ukraine,
   city: 'Lviv',
   username: 'username',
-  avatar: 'test.com/avatar',
+  avatar,
 };
 
 export default {
@@ -30,13 +31,13 @@ const Template: ComponentStory<typeof ProfilePage> = () => <ProfilePage />;
 export const Light = Template.bind({});
 Light.decorators = [StoreDecorator({
   profile: {
-    data: profileData,
+    form: profileData,
   },
 })];
 
 export const Dark = Template.bind({});
 Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({
   profile: {
-    data: profileData,
+    form: profileData,
   },
 })];
