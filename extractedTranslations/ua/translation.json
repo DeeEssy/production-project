@@ -1,5 +1,8 @@
 {
   "": "",
+  "The article didn't found": "The article didn't found",
+  "The article doesn't found": "The article doesn't found",
+  "The article not found": "The article not found",
   "about": "about",
   "edit": "edit",
   "enter": "enter",
@@ -19,6 +22,7 @@
   "error_incorrect_username": "error_incorrect_username",
   "error_no_data": "error_no_data",
   "error_server_error": "error_server_error",
+  "error_the_article_not_found": "error_the_article_not_found",
   "error_try_reload_page": "error_try_reload_page",
   "error_user_data": "error_user_data",
   "language": "language",

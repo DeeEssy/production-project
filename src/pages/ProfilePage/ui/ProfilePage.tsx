@@ -11,7 +11,7 @@ import {
   memo, useCallback, useEffect, useMemo,
 } from 'react';
 import { useSelector } from 'react-redux';
-import { DynamicModuleLoader, ReducerList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import { DynamicModuleLoader, ReducerList } from 'shared/lib';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { Currency } from 'entities/Currency';
 import { Country } from 'entities/Country';

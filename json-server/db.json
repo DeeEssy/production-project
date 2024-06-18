@@ -1,28 +1,103 @@
 {
-  "posts": [
+  "articles": [
     {
       "id": 1,
-      "title": "json-server",
-      "userId": 1
-    },
-    {
-      "id": 2,
-      "title": "json-server",
-      "userId": 2
+      "title": "Lorem Ipsum",
+      "subtitle": "Lorem Ipsum is simply dummy text?",
+      "img": "https://masteringnuxt.com/images/rocket.webp",
+      "views": 1022,
+      "createdAt": "26.02.2022",
+      "type": ["IT"],
+      "blocks": [
+        {
+          "id": 1,
+          "type": "TEXT",
+          "title": "Lorem Ipsum",
+          "paragraphs": [
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam accumsan in quam sit amet convallis. Morbi interdum laoreet ex, id imperdiet neque fermentum et. Vivamus tortor metus, finibus at turpis a, laoreet sodales arcu. Nunc bibendum elit nec ligula suscipit imperdiet. Phasellus sed est at orci tristique pellentesque. Proin vitae ex ac lectus accumsan porta. Proin quis massa vitae arcu mollis vestibulum. Integer quis quam et justo varius maximus et vel dolor. Nunc sollicitudin orci sed augue faucibus gravida. Curabitur a nunc vel sem euismod mollis. Nullam vitae quam tincidunt, convallis nunc eu, sagittis neque. Sed sollicitudin ligula vitae erat maximus tristique. In at consequat nibh, eget molestie dui. Nulla consectetur convallis nisl at sollicitudin. Duis eget tellus faucibus, fermentum mauris vitae, feugiat turpis. Mauris porta erat nec sapien blandit venenatis tristique vitae est. Curabitur pretium sed leo ac bibendum. Donec vitae elit velit. Integer placerat, urna vitae vulputate suscipit, turpis turpis mollis ex, id maximus ligula dui quis nulla. Quisque eu lacinia augue, sit amet rutrum odio. Etiam vitae nisi fringilla, commodo purus nec, placerat felis. Phasellus et libero sit amet erat elementum tempor. Praesent ullamcorper tincidunt purus ornare dictum. Aliquam imperdiet nec erat vestibulum faucibus. Aenean viverra neque vel augue congue, sit amet euismod velit pharetra. Nulla pellentesque diam in neque condimentum iaculis. Sed commodo ligula non lorem porta, nec tempus dolor faucibus. Integer sodales augue elit, posuere porttitor augue fringilla ac. Sed nec risus est. Duis vulputate magna dignissim auctor pulvinar. Sed efficitur odio lectus, at pretium lorem aliquam sit amet. Aenean at tristique lorem. Praesent sit amet consequat ligula. Ut in convallis lorem, at facilisis justo. Nullam tortor ante, porttitor vel libero faucibus, luctus venenatis nisl. Donec quam est, sagittis luctus dignissim at, aliquet id lectus."
+          ]
+        },
+        {
+          "id": 4,
+          "type": "CODE",
+          "code": "<!DOCTYPE html>\n<html>\n  <body>\n    <p id=\"hello\"></p>\n\n    <script>\n      document.getElementById(\"hello\").innerHTML = \"Hello, world!\";\n    </script>\n  </body>\n</html>;"
+        },
+        {
+          "id": 5,
+          "type": "TEXT",
+          "title": "Lorem Ipsum",
+          "paragraphs": [
+            "Cras tincidunt nulla eget lacus fringilla pharetra. Etiam metus elit, congue in fermentum sit amet, dapibus eu libero. Vivamus eget pharetra nulla. Vestibulum neque elit, cursus eget nisi rutrum, tempor ullamcorper lectus. Vivamus sit amet mollis nunc. Vestibulum cursus blandit turpis, ut consectetur lorem iaculis ac. Ut elementum elit lacus, quis aliquet ipsum commodo blandit. Nunc sagittis porttitor ligula, vel egestas tellus dictum a. Fusce fermentum nisl id ullamcorper lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          ]
+        },
+        {
+          "id": 2,
+          "type": "IMAGE",
+          "src": "https://hsto.org/r/w1560/getpro/habr/post_images/d56/a02/ffc/d56a02ffc62949b42904ca00c63d8cc1.png",
+          "title": "Рисунок 1 - скриншот сайта"
+        },
+        {
+          "id": 3,
+          "type": "CODE",
+          "code": "const path = require('path');\n\nconst server = jsonServer.create();\n\nconst router = jsonServer.router(path.resolve(__dirname, 'db.json'));\n\nserver.use(jsonServer.defaults({}));\nserver.use(jsonServer.bodyParser);"
+        },
+        {
+          "id": 7,
+          "type": "TEXT",
+          "title": "Lorem Ipsum",
+          "paragraphs": [
+            "Cras tincidunt nulla eget lacus fringilla pharetra. Etiam metus elit, congue in fermentum sit amet, dapibus eu libero. Vivamus eget pharetra nulla. Vestibulum neque elit, cursus eget nisi rutrum, tempor ullamcorper lectus. Vivamus sit amet mollis nunc. Vestibulum cursus blandit turpis, ut consectetur lorem iaculis ac. Ut elementum elit lacus, quis aliquet ipsum commodo blandit. Nunc sagittis porttitor ligula, vel egestas tellus dictum a. Fusce fermentum nisl id ullamcorper lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          ]
+        },
+        {
+          "id": 8,
+          "type": "IMAGE",
+          "src": "https://res.klook.com/image/upload/c_fill,w_1265,h_712/q_80/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/tsah7c9evnal289z5fig.webp",
+          "title": "Image 1, the screenshot"
+        },
+        {
+          "id": 9,
+          "type": "TEXT",
+          "title": "Lorem Ipsum",
+          "paragraphs": [
+            "Cras tincidunt nulla eget lacus fringilla pharetra. Etiam metus elit, congue in fermentum sit amet, dapibus eu libero. Vivamus eget pharetra nulla. Vestibulum neque elit, cursus eget nisi rutrum, tempor ullamcorper lectus. Vivamus sit amet mollis nunc. Vestibulum cursus blandit turpis, ut consectetur lorem iaculis ac. Ut elementum elit lacus, quis aliquet ipsum commodo blandit. Nunc sagittis porttitor ligula, vel egestas tellus dictum a. Fusce fermentum nisl id ullamcorper lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          ]
+        }
+      ]
     }
   ],
   "comments": [
     {
       "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "text": "some comment 1",
+      "articleId": 1,
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "text": "some comment 2",
+      "articleId": 1,
+      "userId": 1
+    },
+    {
+      "id": 3,
+      "text": "some comment 3",
+      "articleId": 1,
+      "userId": 1
     }
   ],
   "users": [
     {
       "id": 1,
       "username": "admin",
-      "password": "admin"
+      "password": "admin",
+      "role": "ADMIN"
+    },
+    {
+      "id": 2,
+      "username": "user",
+      "password": "user",
+      "role": "USER"
     }
   ],
   "profile": {

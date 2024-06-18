@@ -1,5 +1,7 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { memo } from 'react';
+import { ArticleDetails } from 'entities/Article';
+import { useParams } from 'react-router-dom';
 import cls from './ArticleDetailsPage.module.scss';
 
 interface ArticleDetailsPageProps {
@@ -8,11 +10,11 @@ interface ArticleDetailsPageProps {
 
 const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
   const { className } = props;
+  const { id } = useParams<{id: string}>();
 
   return (
-    // eslint-disable-next-line i18next/no-literal-string
     <div className={classNames(cls.articleDetailsPage, {}, [className])}>
-      ARTICLE DETAILS
+      <ArticleDetails id={Number(id)} />
     </div>
   );
 };
