@@ -1,8 +1,9 @@
 {
     "language": "Українська",
-    "sidebar_mainPage_link_text": "Головна сторiнка",
+    "sidebar_mainPage_link_text": "Головна",
     "sidebar_aboutPage_link_text": "О нас",
     "sidebar_profilePage_link_text": "Профiль",
+    "sidebar_articlesPage_link_text": "Статті",
     "sidebar_toggle_btn": "Переключити",
     "loading_text": "Загрузка...",
     "not_found_page": "Сторiнку не знайдено",
