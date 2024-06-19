@@ -7,12 +7,10 @@ const initialState: ArticleDetailsSchema = {
   isLoading: false,
 };
 
-const currentArticle = createSlice({
+const currentArticleSlice = createSlice({
   name: 'currentArticle',
   initialState,
-  reducers: {
-
-  },
+  reducers: {},
   extraReducers: (builder) => {
     builder
       .addCase(fetchCurrentArticle.pending, (state) => {
@@ -30,6 +28,6 @@ const currentArticle = createSlice({
   },
 });
 
-export const { actions: currentArticleActions } = currentArticle;
+export const { actions: currentArticleActions } = currentArticleSlice;
 
-export const { reducer: currentArticleReducer } = currentArticle;
+export const { reducer: currentArticleReducer } = currentArticleSlice;

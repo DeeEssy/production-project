@@ -1,22 +1,8 @@
-import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk/TestAsyncThunk';
+import { fetchCurrentArticle } from './fetchCurrentArticle';
+import { ArticleBlockType, ArticleType } from '../../types/article';
 
-import { Article } from 'entities/Article';
-import { ArticleBlockType, ArticleType } from 'entities/Article/model/types/article';
-import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
-import ArticleDetailsPage from './ArticleDetailsPage';
-
-export default {
-  title: 'pages/ArticleDetailsPage',
-  component: ArticleDetailsPage,
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
-} as ComponentMeta<typeof ArticleDetailsPage>;
-
-const Template: ComponentStory<typeof ArticleDetailsPage> = (args) => <ArticleDetailsPage {...args} />;
-
-const article: Article = {
+const article = {
   id: 1,
   title: 'Lorem Ipsum',
   subtitle: 'Lorem Ipsum is simply dummy text?',
@@ -47,13 +33,28 @@ const article: Article = {
       title: 'Image 1, the screenshot',
     },
   ],
-
 };
 
-export const Normal = Template.bind({});
-Normal.args = {};
-Normal.decorators = [StoreDecorator({
-  currentArticle: {
-    data: article,
-  },
-})];
+describe('fetchCurrentArticle', () => {
+  test('success fetching current article data', async () => {
+    const thunk = new TestAsyncThunk(fetchCurrentArticle);
+
+    thunk.api.get.mockReturnValue(Promise.resolve({ data: article }));
+    const result = await thunk.callThunk(article.id);
+
+    expect(thunk.api.get).toHaveBeenCalled();
+    expect(result.meta.requestStatus).toBe('fulfilled');
+    expect(result.payload).toEqual(article);
+  });
+
+  test('error fetching profile data', async () => {
+    const thunk = new TestAsyncThunk(fetchCurrentArticle);
+
+    thunk.api.get.mockReturnValue(Promise.resolve({ status: 403 }));
+    const result = await thunk.callThunk(article.id);
+
+    expect(thunk.api.get).toHaveBeenCalled();
+    expect(result.meta.requestStatus).toBe('rejected');
+    expect(result.payload).toBe('error');
+  });
+});
