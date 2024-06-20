@@ -16,5 +16,7 @@
     "error.wrong_username_or_password": "Неправильний юзернейм або пароль",
     "logout": "Вийти",
     "your_currency": "Ваша валюта",
-    "your_country": "Ваша країна"
+    "your_country": "Ваша країна",
+    "comments": "Комментарi",
+    "no_comments": "Поки що без комментарiв"
 }

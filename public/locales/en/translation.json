@@ -16,5 +16,7 @@
     "error.wrong_username_or_password": "Wrong username or password",
     "logout": "Logout",
     "your_currency": "Your currency",
-    "your_country": "Your country"
+    "your_country": "Your country",
+    "comments": "Comments",
+    "no_comments": "No comments yet"
 }

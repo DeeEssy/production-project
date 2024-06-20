@@ -3,9 +3,9 @@ import { classNames } from 'shared/lib';
 import { Navbar } from 'widgets/Navbar';
 import { Sidebar } from 'widgets/Sidebar';
 import { Suspense, useEffect } from 'react';
-import { PageLoader } from 'widgets/PageLoader';
 import { useDispatch, useSelector } from 'react-redux';
 import { getUserAuthInited, userActions } from 'entities/User';
+import { PageLoader } from 'shared/ui/PageLoader';
 import { AppRouter } from './providers/router';
 
 const App = () => {

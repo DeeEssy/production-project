@@ -91,13 +91,15 @@
       "id": 1,
       "username": "admin",
       "password": "admin",
-      "role": "ADMIN"
+      "role": "ADMIN",
+      "avatar": "https://cdn.pixabay.com/photo/2016/08/12/08/01/door-1587863_1280.jpg"
     },
     {
       "id": 2,
       "username": "user",
       "password": "user",
-      "role": "USER"
+      "role": "USER",
+      "avatar": "https://i.ytimg.com/vi/QRtoUoBgjDw/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD9sgvZwEXEC9cWQASAGwKiRJk5sw"
     }
   ],
   "profile": {
