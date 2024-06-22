@@ -7,7 +7,9 @@
       "img": "https://masteringnuxt.com/images/rocket.webp",
       "views": 1022,
       "createdAt": "26.02.2022",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": 1,
@@ -84,6 +86,24 @@
       "text": "some comment 3",
       "articleId": 1,
       "userId": 1
+    },
+    {
+      "articleId": 1,
+      "userId": 1,
+      "text": "dasdasdasdas",
+      "id": 4
+    },
+    {
+      "articleId": 1,
+      "userId": 2,
+      "text": "dasdasdasdasd",
+      "id": 5
+    },
+    {
+      "articleId": 1,
+      "userId": 1,
+      "text": "dsadasdas",
+      "id": 6
     }
   ],
   "users": [
@@ -102,14 +122,28 @@
       "avatar": "https://i.ytimg.com/vi/QRtoUoBgjDw/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD9sgvZwEXEC9cWQASAGwKiRJk5sw"
     }
   ],
-  "profile": {
-    "firstname": "Dmytro",
-    "lastname": "Shevchenko",
-    "age": 22,
-    "currency": "UAH",
-    "country": "Ukraine",
-    "city": "Lviv",
-    "username": "admin",
-    "avatar": "https://cdn.pixabay.com/photo/2016/08/12/08/01/door-1587863_1280.jpg"
-  }
+  "profile": [
+    {
+      "id": 1,
+      "firstname": "Dmytro",
+      "lastname": "Shevchenko",
+      "age": 22,
+      "currency": "UAH",
+      "country": "Ukraine",
+      "city": "Lviv",
+      "username": "admin",
+      "avatar": "https://cdn.pixabay.com/photo/2016/08/12/08/01/door-1587863_1280.jpg"
+    },
+    {
+      "id": 2,
+      "firstname": "test",
+      "lastname": "user",
+      "age": 42,
+      "currency": "USD",
+      "country": "Germany",
+      "city": "Berlin",
+      "username": "user",
+      "avatar": "https://i.ytimg.com/vi/QRtoUoBgjDw/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD9sgvZwEXEC9cWQASAGwKiRJk5sw"
+    }
+  ]
 }

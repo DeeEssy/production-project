@@ -15,6 +15,8 @@ const form = {
   avatar: 'test.png',
 };
 
+const profileId = 1;
+
 describe('updateProfileData', () => {
   test('success fetching profile data', async () => {
     const form = {
@@ -35,7 +37,7 @@ describe('updateProfileData', () => {
     });
 
     thunk.api.put.mockReturnValue(Promise.resolve({ data: form }));
-    const result = await thunk.callThunk();
+    const result = await thunk.callThunk(profileId);
 
     expect(thunk.api.put).toHaveBeenCalled();
     expect(result.meta.requestStatus).toBe('fulfilled');
@@ -50,7 +52,7 @@ describe('updateProfileData', () => {
     });
 
     thunk.api.put.mockReturnValue(Promise.resolve({ status: 403 }));
-    const result = await thunk.callThunk();
+    const result = await thunk.callThunk(profileId);
 
     expect(thunk.api.put).toHaveBeenCalled();
     expect(result.meta.requestStatus).toBe('rejected');
@@ -64,7 +66,7 @@ describe('updateProfileData', () => {
       },
     });
 
-    const result = await thunk.callThunk();
+    const result = await thunk.callThunk(profileId);
 
     expect(result.meta.requestStatus).toBe('rejected');
     expect(result.payload).toEqual([ValidateProfileError.INCORRECT_USERNAME]);

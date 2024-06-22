@@ -1,9 +1,10 @@
 import { Country } from 'entities/Country';
 import { Currency } from 'entities/Currency';
-import { ValidateProfileError } from 'entities/Profile';
+import { Profile, ValidateProfileError } from '../../types/profile';
 import { validateProfileData } from './validateProfileData';
 
-const data = {
+const data: Profile = {
+  id: 1,
   username: 'admin',
   age: 22,
   country: Country.Ukraine,

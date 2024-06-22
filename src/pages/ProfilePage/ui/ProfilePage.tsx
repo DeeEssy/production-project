@@ -8,7 +8,7 @@ import {
 } from 'entities/Profile';
 
 import {
-  memo, useCallback, useEffect, useMemo,
+  memo, useCallback, useMemo,
 } from 'react';
 import { useSelector } from 'react-redux';
 import { DynamicModuleLoader, ReducerList } from 'shared/lib';
@@ -17,6 +17,8 @@ import { Currency } from 'entities/Currency';
 import { Country } from 'entities/Country';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { useTranslation } from 'react-i18next';
+import { useParams } from 'react-router-dom';
+import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader';
 
 const initialReducers: ReducerList = {
@@ -25,6 +27,7 @@ const initialReducers: ReducerList = {
 
 const ProfilePage = memo(() => {
   const { t } = useTranslation('profilePage');
+  const { id } = useParams<{id: string}>();
   const dispatch = useAppDispatch();
   const profileForm = useSelector(getProfileForm);
   const profileIsLoading = useSelector(getProfileIsLoading);
@@ -44,11 +47,11 @@ const ProfilePage = memo(() => {
     [ValidateProfileError.INCORRECT_AVATAR]: t('error_incorrect_avatar'),
   }), [t]);
 
-  useEffect(() => {
-    if (__PROJECT__ !== 'storybook') {
-      dispatch(fetchProfileData());
+  useInitialEffect(() => {
+    if (id) {
+      dispatch(fetchProfileData(Number(id)));
     }
-  }, [dispatch]);
+  });
 
   const onChangeFirstname = useCallback((value: string) => {
     dispatch(profileActions.updateProfile({ firstname: value }));

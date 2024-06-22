@@ -4,22 +4,23 @@ import { Currency } from 'entities/Currency';
 import { fetchProfileData } from './fetchProfileData';
 
 describe('fetchProfileData', () => {
-  test('success fetching profile data', async () => {
-    const form = {
-      username: 'admin',
-      age: 22,
-      country: Country.Ukraine,
-      lastname: 'test',
-      firstname: 'test',
-      city: 'test',
-      currency: Currency.USD,
-      avatar: 'test.png',
-    };
+  const form = {
+    username: 'admin',
+    age: 22,
+    country: Country.Ukraine,
+    lastname: 'test',
+    firstname: 'test',
+    city: 'test',
+    currency: Currency.USD,
+    avatar: 'test.png',
+  };
+  const profileId = 1;
 
+  test('success fetching profile data', async () => {
     const thunk = new TestAsyncThunk(fetchProfileData);
 
     thunk.api.get.mockReturnValue(Promise.resolve({ data: form }));
-    const result = await thunk.callThunk();
+    const result = await thunk.callThunk(profileId);
 
     expect(thunk.api.get).toHaveBeenCalled();
     expect(result.meta.requestStatus).toBe('fulfilled');
@@ -30,7 +31,7 @@ describe('fetchProfileData', () => {
     const thunk = new TestAsyncThunk(fetchProfileData);
 
     thunk.api.get.mockReturnValue(Promise.resolve({ status: 403 }));
-    const result = await thunk.callThunk();
+    const result = await thunk.callThunk(profileId);
 
     expect(thunk.api.get).toHaveBeenCalled();
     expect(result.meta.requestStatus).toBe('rejected');

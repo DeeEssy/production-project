@@ -18,5 +18,7 @@
     "your_currency": "Your currency",
     "your_country": "Your country",
     "comments": "Comments",
-    "no_comments": "No comments yet"
+    "no_comments": "No comments yet",
+    "write_your_comment": "Write your comment...",
+    "send_comment": "Send"
 }

@@ -9,6 +9,8 @@ import {
 } from 'entities/Profile';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { memo, useCallback } from 'react';
+import { useParams } from 'react-router-dom';
+import { getUserAuthData } from 'entities/User';
 import cls from './ProfilePageHeader.module.scss';
 
 interface ProfilePageHeaderProps {
@@ -17,9 +19,12 @@ interface ProfilePageHeaderProps {
 
 export const ProfilePageHeader = memo(({ className }: ProfilePageHeaderProps) => {
   const { t } = useTranslation('profilePage');
+  const { id: profileId } = useParams<{id: string}>();
   const dispatch = useAppDispatch();
   const readonly = useSelector(getProfileReadonly);
   const isLoading = useSelector(getProfileIsLoading);
+  const user = useSelector(getUserAuthData);
+  const isEditable = Number(profileId) === user?.id;
 
   const onEdit = useCallback(() => {
     dispatch(profileActions.setReadonly(false));
@@ -30,42 +35,44 @@ export const ProfilePageHeader = memo(({ className }: ProfilePageHeaderProps) =>
   }, [dispatch]);
 
   const onSave = useCallback(async () => {
-    await dispatch(updateProfileData());
-  }, [dispatch]);
+    await dispatch(updateProfileData(Number(profileId)));
+  }, [dispatch, profileId]);
 
   return (
     <div className={classNames(cls.profilePageHeader, {}, [className])}>
       <Text title={t('profile')} />
-      {readonly
-        ? (
-          <Button
-            className={cls.editBtn}
-            theme={ThemeButton.OUTLINE}
-            onClick={onEdit}
-          >
-            {t('edit')}
-          </Button>
-        )
-        : (
-          <>
+      { isEditable && (
+        readonly
+          ? (
             <Button
               className={cls.editBtn}
-              theme={ThemeButton.OUTLINE_RED}
-              onClick={onCancelEdit}
-              disabled={isLoading}
-            >
-              {t('undo')}
-            </Button>
-            <Button
-              className={cls.saveBtn}
               theme={ThemeButton.OUTLINE}
-              onClick={onSave}
-              disabled={isLoading}
+              onClick={onEdit}
             >
-              {t('save')}
+              {t('edit')}
             </Button>
-          </>
-        )}
+          )
+          : (
+            <>
+              <Button
+                className={cls.editBtn}
+                theme={ThemeButton.OUTLINE_RED}
+                onClick={onCancelEdit}
+                disabled={isLoading}
+              >
+                {t('undo')}
+              </Button>
+              <Button
+                className={cls.saveBtn}
+                theme={ThemeButton.OUTLINE}
+                onClick={onSave}
+                disabled={isLoading}
+              >
+                {t('save')}
+              </Button>
+            </>
+          )
+      )}
     </div>
   );
 });
