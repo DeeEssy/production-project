@@ -8,6 +8,7 @@ import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useSelector } from 'react-redux';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { Loader } from 'shared/ui/Loader/Loader';
+import { Page } from 'shared/ui/Page/Page';
 import { getArticleCommentsIsLoading }
   from '../../model/selectors/getArticleCommentsIsLoading/getArticleCommentsIsLoading';
 import { getArticleCommentsError } from '../../model/selectors/getArticleCommentsError/getArticleCommentsError';
@@ -44,7 +45,7 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
 
   return (
     <Suspense fallback={<Loader />}>
-      <div className={classNames(cls.articleDetailsPage, {}, [className])}>
+      <Page className={classNames(cls.articleDetailsPage, {}, [className])}>
         <ArticleDetails id={Number(id)} />
         <DynamicModuleLoader reducers={initialReducers}>
           <CommentsBlock
@@ -54,7 +55,7 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
             comments={comments}
           />
         </DynamicModuleLoader>
-      </div>
+      </Page>
     </Suspense>
   );
 };

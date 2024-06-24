@@ -19,6 +19,7 @@ import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
+import { Page } from 'shared/ui/Page/Page';
 import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader';
 
 const initialReducers: ReducerList = {
@@ -100,22 +101,24 @@ const ProfilePage = memo(() => {
 
   return (
     <DynamicModuleLoader reducers={initialReducers}>
-      <ProfilePageHeader />
-      {validateErrors}
-      <ProfileCard
-        data={profileForm}
-        isLoading={profileIsLoading}
-        error={profileError}
-        readonly={profileReadonly}
-        onChangeFirstname={onChangeFirstname}
-        onChangeLastname={onChangeLastname}
-        onChangeAge={onChangeAge}
-        onChangeCity={onChangeCity}
-        onChangeAvatar={onChangeAvatar}
-        onChangeUsername={onChangeUsername}
-        onChangeCurrency={onChangeCurrency}
-        onChangeCountry={onChangeCountry}
-      />
+      <Page>
+        <ProfilePageHeader />
+        {validateErrors}
+        <ProfileCard
+          data={profileForm}
+          isLoading={profileIsLoading}
+          error={profileError}
+          readonly={profileReadonly}
+          onChangeFirstname={onChangeFirstname}
+          onChangeLastname={onChangeLastname}
+          onChangeAge={onChangeAge}
+          onChangeCity={onChangeCity}
+          onChangeAvatar={onChangeAvatar}
+          onChangeUsername={onChangeUsername}
+          onChangeCurrency={onChangeCurrency}
+          onChangeCountry={onChangeCountry}
+        />
+      </Page>
     </DynamicModuleLoader>
   );
 });
