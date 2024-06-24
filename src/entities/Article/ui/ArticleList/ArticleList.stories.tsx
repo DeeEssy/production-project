@@ -1,8 +1,21 @@
+import React from 'react';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+
 import { UserRole } from 'entities/User';
-import { ArticleDetailsSchema } from '../types/articleDetailsSchema';
-import { currentArticleReducer } from './currentArticleSlice';
-import { Article, ArticleBlockType, ArticleType } from '../types/article';
-import { fetchCurrentArticle } from '../services/fetchCurrentArticle/fetchCurrentArticle';
+import { ArticleList } from './ArticleList';
+import {
+  Article, ArticleBlockType, ArticleType, ArticleView,
+} from '../../model/types/article';
+
+export default {
+  title: 'entities/Article/ArticleList',
+  component: ArticleList,
+  argTypes: {
+    backgroundColor: { control: 'color' },
+  },
+} as ComponentMeta<typeof ArticleList>;
+
+const Template: ComponentStory<typeof ArticleList> = (args) => <ArticleList {...args} />;
 
 const article: Article = {
   id: 1,
@@ -11,13 +24,13 @@ const article: Article = {
   img: 'https://masteringnuxt.com/images/rocket.webp',
   views: 1022,
   createdAt: '26.02.2022',
+  type: [ArticleType.IT],
   user: {
     id: 1,
     role: UserRole.ADMIN,
     username: 'admin',
     avatar: 'https://hsto.org/r/w1560/getpro/habr/post_images/d56/a02/ffc/d56a02ffc62949b42904ca00c63d8cc1.png',
   },
-  type: [ArticleType.IT],
   blocks: [
     {
       id: 1,
@@ -41,31 +54,45 @@ const article: Article = {
       title: 'Image 1, the screenshot',
     },
   ],
+
 };
 
-describe('currentArticleSlice', () => {
-  test('fetchCurrentArticle.pending', () => {
-    const state: DeepPartial<ArticleDetailsSchema> = {
-      isLoading: false,
-    };
-    expect(currentArticleReducer(
-        state as ArticleDetailsSchema,
-        fetchCurrentArticle.pending,
-    )).toEqual({
-      isLoading: true,
-    });
-  });
+export const LoadingBig = Template.bind({});
+LoadingBig.args = {
+  articles: [],
+  isLoading: true,
+  view: ArticleView.BIG,
+};
 
-  test('fetchCurrentArticle.fulfilled', () => {
-    const state: DeepPartial<ArticleDetailsSchema> = {
-      isLoading: true,
-    };
-    expect(currentArticleReducer(
-        state as ArticleDetailsSchema,
-        fetchCurrentArticle.fulfilled(article, '', article.id, ''),
-    )).toEqual({
-      isLoading: false,
-      data: article,
-    });
-  });
-});
+export const LoadingSmall = Template.bind({});
+LoadingSmall.args = {
+  articles: [],
+  isLoading: true,
+  view: ArticleView.SMALL,
+};
+
+export const ListSmall = Template.bind({});
+ListSmall.args = {
+  // @ts-ignore
+  articles: new Array(9)
+    .fill(0)
+    .map((item, index) => ({
+      ...article,
+      id: String(index),
+    })),
+  isLoading: false,
+  view: ArticleView.SMALL,
+};
+
+export const ListBig = Template.bind({});
+ListBig.args = {
+  // @ts-ignore
+  articles: new Array(9)
+    .fill(0)
+    .map((item, index) => ({
+      ...article,
+      id: String(index),
+    })),
+  isLoading: false,
+  view: ArticleView.BIG,
+};

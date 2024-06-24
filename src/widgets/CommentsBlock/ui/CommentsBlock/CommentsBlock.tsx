@@ -21,8 +21,12 @@ export const CommentsBlock = memo(({
 
   return (
     <div className={classNames(cls.commentsBlock, {}, [className])}>
-      <Text className={classNames(cls.title)} title={t('comments')} />
-      <AddCommentForm onSendComment={onSendComment} />
+      {!isLoading && (
+      <>
+        <Text className={classNames(cls.title)} title={t('comments')} />
+        <AddCommentForm onSendComment={onSendComment} />
+      </>
+      )}
       <CommentList error={error} isLoading={isLoading} comments={comments} />
     </div>
   );

@@ -4,6 +4,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Article } from 'entities/Article';
 import { ArticleBlockType, ArticleType } from 'entities/Article/model/types/article';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
+import { UserRole } from 'entities/User';
 import ArticleDetailsPage from './ArticleDetailsPage';
 
 export default {
@@ -22,6 +23,12 @@ const article: Article = {
   subtitle: 'Lorem Ipsum is simply dummy text?',
   img: 'https://masteringnuxt.com/images/rocket.webp',
   views: 1022,
+  user: {
+    id: 1,
+    role: UserRole.ADMIN,
+    username: 'admin',
+    avatar: 'https://hsto.org/r/w1560/getpro/habr/post_images/d56/a02/ffc/d56a02ffc62949b42904ca00c63d8cc1.png',
+  },
   createdAt: '26.02.2022',
   type: [ArticleType.IT],
   blocks: [
@@ -47,7 +54,6 @@ const article: Article = {
       title: 'Image 1, the screenshot',
     },
   ],
-
 };
 
 export const Light = Template.bind({});

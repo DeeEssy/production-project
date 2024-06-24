@@ -4,6 +4,7 @@
   "The article doesn't found": "The article doesn't found",
   "The article not found": "The article not found",
   "about": "about",
+  "back_to_articles": "back_to_articles",
   "comments": "comments",
   "edit": "edit",
   "enter": "enter",
@@ -37,6 +38,7 @@
   "no_comments": "no_comments",
   "not_found_page": "not_found_page",
   "profile": "profile",
+  "read_more": "read_more",
   "save": "save",
   "send_comment": "send_comment",
   "sidebar_toggle_btn": "sidebar_toggle_btn",
@@ -52,10 +54,18 @@
   "your_username": "your_username",
   "Введите текст комментария": "Введите текст комментария",
   "Вы ввели неверный логин или пароль": "Вы ввели неверный логин или пароль",
+  "Назад к списку": "Назад к списку",
   "Отменить": "Отменить",
   "Отправить": "Отправить",
   "Попробуйте обновить страницу": "Попробуйте обновить страницу",
   "Произошла ошибка при загрузке профиля": "Произошла ошибка при загрузке профиля",
   "Редактировать": "Редактировать",
-  "Сохранить": "Сохранить"
+  "Сохранить": "Сохранить",
+  "Читать далее": {
+    "": {
+      "": {
+        "": ""
+      }
+    }
+  }
 }
