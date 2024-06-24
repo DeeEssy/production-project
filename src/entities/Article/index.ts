@@ -6,3 +6,4 @@ export { getCurrentArticleError } from './model/selectors/getCurrentArticleError
 export { getCurrentArticleData } from './model/selectors/getCurrentArticleData/getCurrentArticleData';
 export { getCurrentArticleIsLoading } from './model/selectors/getCurrentArticleIsLoading/getCurrentArticleIsLoading';
 export { ArticleList } from './ui/ArticleList/ArticleList';
+export { ArticleViewSelector } from './ui/ArticleViewSelector/ArticleViewSelector';

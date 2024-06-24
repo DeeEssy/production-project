@@ -5,6 +5,7 @@ import { profileReducer } from 'entities/Profile';
 import { addCommentFormReducer } from 'features/AddCommentForm';
 import { loginReducer } from 'features/AuthByUsername';
 import { articleCommentsReducer } from 'pages/ArticleDetailsPage';
+import { articlesReducer } from 'pages/ArticlesPage';
 import { ReducerList } from 'shared/lib';
 
 const defaultAsyncReducers: ReducerList = {
@@ -13,6 +14,7 @@ const defaultAsyncReducers: ReducerList = {
   currentArticle: currentArticleReducer,
   articleComments: articleCommentsReducer,
   addCommentForm: addCommentFormReducer,
+  articles: articlesReducer,
 };
 
 export const StoreDecorator = (

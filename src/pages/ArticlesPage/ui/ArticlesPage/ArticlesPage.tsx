@@ -1,61 +1,55 @@
 import { classNames } from 'shared/lib/classNames/classNames';
-import { memo } from 'react';
-import { ArticleList } from 'entities/Article';
-import { UserRole } from 'entities/User';
-import { ArticleBlockType, ArticleType, ArticleView } from 'entities/Article/model/types/article';
+import { Suspense, memo, useCallback } from 'react';
+import { ArticleList, ArticleView, ArticleViewSelector } from 'entities/Article';
+import { DynamicModuleLoader, ReducerList } from 'shared/lib';
+import { Loader } from 'shared/ui/Loader/Loader';
+import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
+import { useSelector } from 'react-redux';
 import cls from './ArticlesPage.module.scss';
+import { articlesActions, articlesReducer } from '../../model/slices/articles';
+import { fetchArticles } from '../../model/services/fetchArticles';
+import { getNormalizeArticles } from '../../model/selectors/getNormalizeArticles/getNormalizeArticles';
+import { getArticlesIsLoading } from '../../model/selectors/getArticlesIsLoading/getArticlesIsLoading';
+import { getArticlesView } from '../../model/selectors/getArticlesView/getArticlesView';
 
 interface ArticlesPageProps {
     className?: string;
 }
 
-const ArticlesPage = (props: ArticlesPageProps) => {
-  const { className } = props;
+const initialReducers: ReducerList = {
+  articles: articlesReducer,
+};
+
+const ArticlesPage = ({ className }: ArticlesPageProps) => {
+  const dispatch = useAppDispatch();
+  const articles = useSelector(getNormalizeArticles.selectAll);
+  const isLoading = useSelector(getArticlesIsLoading);
+  const view = useSelector(getArticlesView);
+
+  const onChangeView = useCallback((view: ArticleView) => {
+    dispatch(articlesActions.setView(view));
+  }, [dispatch]);
+
+  useInitialEffect(() => {
+    dispatch(articlesActions.initState());
+    dispatch(fetchArticles());
+  });
 
   return (
-    <div className={classNames(cls.articlesPage, {}, [className])}>
-      <ArticleList
-        view={ArticleView.BIG}
-        articles={[{
-          id: 1,
-          title: 'Lorem Ipsum',
-          subtitle: 'Lorem Ipsum is simply dummy text?',
-          img: 'https://masteringnuxt.com/images/rocket.webp',
-          views: 1022,
-          user: {
-            id: 1,
-            role: UserRole.ADMIN,
-            username: 'admin',
-            avatar: 'https://hsto.org/r/w1560/getpro/habr/post_images/d56/a02/ffc/d56a02ffc62949b42904ca00c63d8cc1.png',
-          },
-          createdAt: '26.02.2022',
-          type: [ArticleType.IT],
-          blocks: [
-            {
-              id: 1,
-              type: ArticleBlockType.TEXT,
-              title: 'Lorem Ipsum',
-              paragraphs: [
-                // eslint-disable-next-line max-len
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam accumsan in quam sit amet convallis. Morbi interdum laoreet ex, id imperdiet neque fermentum et. Vivamus tortor metus, finibus at turpis a, laoreet sodales arcu. Nunc bibendum elit nec ligula suscipit imperdiet. Phasellus sed est at orci tristique pellentesque. Proin vitae ex ac lectus accumsan porta. Proin quis massa vitae arcu mollis vestibulum. Integer quis quam et justo varius maximus et vel dolor. Nunc sollicitudin orci sed augue faucibus gravida. Curabitur a nunc vel sem euismod mollis. Nullam vitae quam tincidunt, convallis nunc eu, sagittis neque. Sed sollicitudin ligula vitae erat maximus tristique. In at consequat nibh, eget molestie dui. Nulla consectetur convallis nisl at sollicitudin. Duis eget tellus faucibus, fermentum mauris vitae, feugiat turpis. Mauris porta erat nec sapien blandit venenatis tristique vitae est. Curabitur pretium sed leo ac bibendum. Donec vitae elit velit. Integer placerat, urna vitae vulputate suscipit, turpis turpis mollis ex, id maximus ligula dui quis nulla. Quisque eu lacinia augue, sit amet rutrum odio. Etiam vitae nisi fringilla, commodo purus nec, placerat felis. Phasellus et libero sit amet erat elementum tempor. Praesent ullamcorper tincidunt purus ornare dictum. Aliquam imperdiet nec erat vestibulum faucibus. Aenean viverra neque vel augue congue, sit amet euismod velit pharetra. Nulla pellentesque diam in neque condimentum iaculis. Sed commodo ligula non lorem porta, nec tempus dolor faucibus. Integer sodales augue elit, posuere porttitor augue fringilla ac. Sed nec risus est. Duis vulputate magna dignissim auctor pulvinar. Sed efficitur odio lectus, at pretium lorem aliquam sit amet. Aenean at tristique lorem. Praesent sit amet consequat ligula. Ut in convallis lorem, at facilisis justo. Nullam tortor ante, porttitor vel libero faucibus, luctus venenatis nisl. Donec quam est, sagittis luctus dignissim at, aliquet id lectus.',
-              ],
-            },
-            {
-              id: 4,
-              type: ArticleBlockType.CODE,
-              // eslint-disable-next-line max-len
-              code: '<!DOCTYPE html>\n<html>\n  <body>\n    <p id="hello"></p>\n\n    <script>\n      document.getElementById("hello").innerHTML = "Hello, world!";\n    </script>\n  </body>\n</html>;',
-            },
-            {
-              id: 2,
-              type: ArticleBlockType.IMAGE,
-              src: 'https://hsto.org/r/w1560/getpro/habr/post_images/d56/a02/ffc/d56a02ffc62949b42904ca00c63d8cc1.png',
-              title: 'Image 1, the screenshot',
-            },
-          ],
-        }]}
-      />
-    </div>
+    <Suspense fallback={<Loader />}>
+      <DynamicModuleLoader reducers={initialReducers}>
+        <div className={classNames(cls.articlesPage, {}, [className])}>
+          <ArticleViewSelector view={view} onViewClick={onChangeView} />
+          <ArticleList
+            view={view}
+            articles={articles}
+            isLoading={isLoading}
+          />
+        </div>
+      </DynamicModuleLoader>
+    </Suspense>
+
   );
 };
 

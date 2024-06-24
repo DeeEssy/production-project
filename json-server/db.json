@@ -147,7 +147,8 @@
       "createdAt": "11.11.2021",
       "userId": 1,
       "type": [
-        "IT", "SCIENCE"
+        "IT",
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -243,6 +244,12 @@
       "userId": 1,
       "text": "dsadasdas",
       "id": 6
+    },
+    {
+      "articleId": 1,
+      "userId": 1,
+      "text": "dasdasda",
+      "id": 7
     }
   ],
   "users": [
