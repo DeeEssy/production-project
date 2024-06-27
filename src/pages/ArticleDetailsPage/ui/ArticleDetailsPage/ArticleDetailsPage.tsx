@@ -8,7 +8,7 @@ import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useSelector } from 'react-redux';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { Loader } from 'shared/ui/Loader/Loader';
-import { Page } from 'shared/ui/Page/Page';
+import { Page } from 'widgets/Page/Page';
 import { getArticleCommentsIsLoading }
   from '../../model/selectors/getArticleCommentsIsLoading/getArticleCommentsIsLoading';
 import { getArticleCommentsError } from '../../model/selectors/getArticleCommentsError/getArticleCommentsError';
