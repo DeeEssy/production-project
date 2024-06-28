@@ -2,11 +2,11 @@
   "articles": [
     {
       "id": 1,
-      "title": "Lorem Ipsum",
+      "title": "Lorem Ipsum 12312",
       "subtitle": "Lorem Ipsum is simply dummy text?",
       "img": "https://masteringnuxt.com/images/rocket.webp",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 34,
+      "createdAt": "26.02.2019",
       "userId": 1,
       "type": [
         "IT",
@@ -143,7 +143,7 @@
       "title": "dsadasd",
       "subtitle": "L21312312312?",
       "img": "https://res.klook.com/image/upload/c_fill,w_1265,h_712/q_80/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/tsah7c9evnal289z5fig.webp",
-      "views": 22,
+      "views": 212,
       "createdAt": "11.11.2021",
       "userId": 1,
       "type": [
@@ -171,7 +171,7 @@
       "title": "dsadasd",
       "subtitle": "L21312312312?",
       "img": "https://res.klook.com/image/upload/c_fill,w_1265,h_712/q_80/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/tsah7c9evnal289z5fig.webp",
-      "views": 22,
+      "views": 2532,
       "createdAt": "11.11.2021",
       "userId": 1,
       "type": [
@@ -199,12 +199,11 @@
       "title": "dsadasd",
       "subtitle": "L21312312312?",
       "img": "https://res.klook.com/image/upload/c_fill,w_1265,h_712/q_80/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/tsah7c9evnal289z5fig.webp",
-      "views": 22,
+      "views": 121212,
       "createdAt": "11.11.2021",
       "userId": 1,
       "type": [
-        "IT",
-        "SCIENCE"
+        "IT"
       ],
       "blocks": [
         {
@@ -227,12 +226,11 @@
       "title": "dsadasd",
       "subtitle": "L21312312312?",
       "img": "https://res.klook.com/image/upload/c_fill,w_1265,h_712/q_80/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/tsah7c9evnal289z5fig.webp",
-      "views": 22,
+      "views": 262,
       "createdAt": "11.11.2021",
       "userId": 1,
       "type": [
-        "IT",
-        "SCIENCE"
+        "IT"
       ],
       "blocks": [
         {
@@ -255,12 +253,11 @@
       "title": "dsadasd",
       "subtitle": "L21312312312?",
       "img": "https://res.klook.com/image/upload/c_fill,w_1265,h_712/q_80/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/tsah7c9evnal289z5fig.webp",
-      "views": 22,
+      "views": 12122,
       "createdAt": "11.11.2021",
       "userId": 1,
       "type": [
-        "IT",
-        "SCIENCE"
+        "ECONOMICS"
       ],
       "blocks": [
         {
@@ -283,11 +280,10 @@
       "title": "dsadasd",
       "subtitle": "L21312312312?",
       "img": "https://res.klook.com/image/upload/c_fill,w_1265,h_712/q_80/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/tsah7c9evnal289z5fig.webp",
-      "views": 22,
+      "views": 2278,
       "createdAt": "11.11.2021",
       "userId": 1,
       "type": [
-        "IT",
         "SCIENCE"
       ],
       "blocks": [
@@ -311,11 +307,10 @@
       "title": "dsadasd",
       "subtitle": "L21312312312?",
       "img": "https://res.klook.com/image/upload/c_fill,w_1265,h_712/q_80/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/tsah7c9evnal289z5fig.webp",
-      "views": 22,
+      "views": 2982,
       "createdAt": "11.11.2021",
       "userId": 1,
       "type": [
-        "IT",
         "SCIENCE"
       ],
       "blocks": [
@@ -339,11 +334,10 @@
       "title": "dsadasd",
       "subtitle": "L21312312312?",
       "img": "https://res.klook.com/image/upload/c_fill,w_1265,h_712/q_80/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/tsah7c9evnal289z5fig.webp",
-      "views": 22,
+      "views": 2682,
       "createdAt": "11.11.2021",
       "userId": 1,
       "type": [
-        "IT",
         "SCIENCE"
       ],
       "blocks": [
@@ -367,7 +361,7 @@
       "title": "dsadasd",
       "subtitle": "L21312312312?",
       "img": "https://res.klook.com/image/upload/c_fill,w_1265,h_712/q_80/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/tsah7c9evnal289z5fig.webp",
-      "views": 22,
+      "views": 2162,
       "createdAt": "11.11.2021",
       "userId": 1,
       "type": [
@@ -395,12 +389,11 @@
       "title": "dsadasd",
       "subtitle": "L21312312312?",
       "img": "https://res.klook.com/image/upload/c_fill,w_1265,h_712/q_80/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/tsah7c9evnal289z5fig.webp",
-      "views": 22,
+      "views": 2,
       "createdAt": "11.11.2021",
       "userId": 1,
       "type": [
-        "IT",
-        "SCIENCE"
+        "ECONOMICS"
       ],
       "blocks": [
         {

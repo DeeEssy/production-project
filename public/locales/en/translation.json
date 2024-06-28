@@ -21,5 +21,18 @@
     "no_comments": "No comments yet",
     "write_your_comment": "Write your comment...",
     "send_comment": "Send",
-    "read_more": "Read more..."
+    "read_more": "Read more...",
+    "all_articles": "All",
+    "it": "IT",
+    "economics": "ECONOMICS",
+    "science": "SCIENCE",
+    "increasing": "increasing",
+    "decreasing": "decreasing",
+    "created_date": "created date",
+    "title": "title",
+    "views": "views",
+    "sort_by": "Sort by",
+    "by": "by",
+    "search": "Search",
+    "no_articles": "No articles found"
 }

@@ -21,5 +21,18 @@
     "no_comments": "Поки що без комментарiв",
     "write_your_comment": "Залиште ваш комментар...",
     "send_comment": "Вiдправити",
-    "read_more": "Читати бiльше..."
+    "read_more": "Читати бiльше...",
+    "all_articles": "Усi",
+    "it": "IT",
+    "economics": "Економiка",
+    "science": "Наука",
+    "increasing": "зростання",
+    "decreasing": "зменшення",
+    "created_date": "дата створення",
+    "title": "назва",
+    "views": "перегляди",
+    "sort_by": "Сортирувати по",
+    "by": "по",
+    "search": "Пошук",
+    "no_articles": "Нiчого не знайдено"
 }

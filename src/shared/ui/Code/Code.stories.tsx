@@ -27,7 +27,7 @@ Light.args = {
         + '\n'
         + 'const Template: ComponentStory<typeof Code> = (args) => <Code {...args} />;\n'
         + '\n'
-        + 'export const Normal = Template.bind({});',
+        + 'export const Light = Template.bind({});',
 };
 
 export const Dark = Template.bind({});
@@ -42,7 +42,7 @@ Dark.args = {
         + '\n'
         + 'const Template: ComponentStory<typeof Code> = (args) => <Code {...args} />;\n'
         + '\n'
-        + 'export const Normal = Template.bind({});',
+        + 'export const Light = Template.bind({});',
 };
 Dark.decorators = [ThemeDecorator(Theme.DARK)];
 
@@ -58,6 +58,6 @@ Orange.args = {
         + '\n'
         + 'const Template: ComponentStory<typeof Code> = (args) => <Code {...args} />;\n'
         + '\n'
-        + 'export const Normal = Template.bind({});',
+        + 'export const Light = Template.bind({});',
 };
 Orange.decorators = [ThemeDecorator(Theme.ORANGE)];
