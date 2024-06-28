@@ -23,6 +23,7 @@ import { getNormalizeArticleComments }
 import { addCommentForArticle } from '../../model/services/addCommentForArticle';
 import { getArticleRecommendationsIsLoading } from '../../model/selectors/getArticleRecommendationsIsLoading/getArticleRecommendationsIsLoading';
 import { fetchArticleRecommendations } from '../../model/services/fetchArticleRecommendations';
+import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader';
 
 interface ArticleDetailsPageProps {
     className?: string;
@@ -57,6 +58,7 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
     <DynamicModuleLoader reducers={initialReducers}>
       <Suspense fallback={<Loader />}>
         <Page className={classNames(cls.articleDetailsPage, {}, [className])}>
+          <ArticleDetailsPageHeader />
           <ArticleDetails id={Number(id)} />
           <Text size={TextSize.L} title={t('recommendations')} />
           <ArticleList target="_blank" className={cls.recommendations} articles={recommendations} isLoading={isRecommendationsLoading} />

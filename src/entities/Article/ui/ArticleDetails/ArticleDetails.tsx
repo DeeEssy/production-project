@@ -9,9 +9,6 @@ import { Avatar } from 'shared/ui/Avatar/Avatar';
 import EyeIcon from 'shared/assets/icons/eye-20-20.svg';
 import CalendarIcon from 'shared/assets/icons/calendar-20-20.svg';
 import { Icon } from 'shared/ui/Icon/Icon';
-import { Button, ThemeButton } from 'shared/ui/Button/Button';
-import { RoutePath } from 'shared/config/routeConfig/routeConfig';
-import { useNavigate } from 'react-router-dom';
 import { getCurrentArticleData } from '../../model/selectors/getCurrentArticleData/getCurrentArticleData';
 import { getCurrentArticleIsLoading }
   from '../../model/selectors/getCurrentArticleIsLoading/getCurrentArticleIsLoading';
@@ -38,13 +35,8 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
   const { t } = useTranslation('currentArticlePage');
   const dispatch = useAppDispatch();
   const isLoading = useSelector(getCurrentArticleIsLoading);
-  const navigate = useNavigate();
   const article = useSelector(getCurrentArticleData);
   const error = useSelector(getCurrentArticleError);
-
-  const onBackToList = useCallback(() => {
-    navigate(`/${RoutePath.articles}`);
-  }, [navigate]);
 
   useEffect(() => {
     if (__PROJECT__ !== 'storybook') {
@@ -111,9 +103,6 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
   } else {
     content = (
       <div className={classNames(cls.articleDetails, {}, [className])}>
-        <Button className={cls.backButton} theme={ThemeButton.OUTLINE} onClick={onBackToList}>
-          {t('back_to_articles')}
-        </Button>
         <div className={cls.avatarWrapper}>
           <Avatar
             size={200}

@@ -35,5 +35,7 @@
     "by": "by",
     "search": "Search",
     "no_articles": "No articles found",
-    "recommendations": "Recommendations"
+    "recommendations": "Recommendations",
+    "application_name": "Articles App",
+    "create_article": "Create article"
 }

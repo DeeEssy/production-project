@@ -35,5 +35,7 @@
     "by": "по",
     "search": "Пошук",
     "no_articles": "Нiчого не знайдено",
-    "recommendations": "Рекомендацii"
+    "recommendations": "Рекомендацii",
+    "application_name": "Articles App",
+    "create_article": "Створити статтю"
 }
