@@ -2,7 +2,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { CommentList, CommentType } from 'entities/Comment';
-import { Text } from 'shared/ui/Text/Text';
+import { Text, TextSize } from 'shared/ui/Text/Text';
 import { AddCommentForm } from 'features/AddCommentForm';
 import cls from './CommentsBlock.module.scss';
 
@@ -23,7 +23,7 @@ export const CommentsBlock = memo(({
     <div className={classNames(cls.commentsBlock, {}, [className])}>
       {!isLoading && (
       <>
-        <Text className={classNames(cls.title)} title={t('comments')} />
+        <Text size={TextSize.L} className={classNames(cls.title)} title={t('comments')} />
         <AddCommentForm onSendComment={onSendComment} />
       </>
       )}

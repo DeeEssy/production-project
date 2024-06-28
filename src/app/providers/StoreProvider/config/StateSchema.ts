@@ -9,7 +9,8 @@ import { UserSchema } from 'entities/User';
 import { AddCommentFormSchema } from 'features/AddCommentForm';
 import { LoginSchema } from 'features/AuthByUsername';
 import { ScrollSaverSchema } from 'features/ScrollSaver';
-import { ArticleDetailsCommentsSchema } from 'pages/ArticleDetailsPage';
+import { ArticleDetailsPageSchema } from 'pages/ArticleDetailsPage';
+
 import { ArticlesSchema } from 'pages/ArticlesPage';
 
 export interface StateSchema {
@@ -18,12 +19,12 @@ export interface StateSchema {
     scrollSaver: ScrollSaverSchema;
 
     // Async reducers
-    currentArticle?: ArticleDetailsSchema
     loginForm?: LoginSchema;
     profile?: ProfileSchema;
-    articleComments?: ArticleDetailsCommentsSchema;
     addCommentForm?: AddCommentFormSchema;
+    currentArticle?: ArticleDetailsSchema
     articles?: ArticlesSchema;
+    articleDetailsPage?: ArticleDetailsPageSchema;
 }
 
 export type StateSchemaKey = keyof StateSchema;

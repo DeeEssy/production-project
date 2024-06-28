@@ -1,5 +1,5 @@
 import { StateSchema } from 'app/providers/StoreProvider';
-import { commentsAdapter } from '../../slices/articleComments';
+import { commentsAdapter } from '../../slices/articleCommentsSlice';
 
 export const getNormalizeArticleComments = commentsAdapter
-  .getSelectors<StateSchema>((state) => state.articleComments || commentsAdapter.getInitialState());
+  .getSelectors<StateSchema>((state) => state.articleDetailsPage?.comments || commentsAdapter.getInitialState());

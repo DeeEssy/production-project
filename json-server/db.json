@@ -902,6 +902,18 @@
       "userId": 1,
       "text": "dasdasda",
       "id": 7
+    },
+    {
+      "articleId": 5,
+      "userId": 1,
+      "text": "dasdasdas",
+      "id": 8
+    },
+    {
+      "articleId": 5,
+      "userId": 1,
+      "text": "dasdas",
+      "id": 9
     }
   ],
   "users": [

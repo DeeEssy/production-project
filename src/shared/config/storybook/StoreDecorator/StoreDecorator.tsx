@@ -4,7 +4,7 @@ import { currentArticleReducer } from 'entities/Article';
 import { profileReducer } from 'entities/Profile';
 import { addCommentFormReducer } from 'features/AddCommentForm';
 import { loginReducer } from 'features/AuthByUsername';
-import { articleCommentsReducer } from 'pages/ArticleDetailsPage';
+import { articleDetailsPageReducer } from 'pages/ArticleDetailsPage';
 import { articlesReducer } from 'pages/ArticlesPage';
 import { ReducerList } from 'shared/lib';
 
@@ -12,7 +12,7 @@ const defaultAsyncReducers: ReducerList = {
   loginForm: loginReducer,
   profile: profileReducer,
   currentArticle: currentArticleReducer,
-  articleComments: articleCommentsReducer,
+  articleDetailsPage: articleDetailsPageReducer,
   addCommentForm: addCommentFormReducer,
   articles: articlesReducer,
 };

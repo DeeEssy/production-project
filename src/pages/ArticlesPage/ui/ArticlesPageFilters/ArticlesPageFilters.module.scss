@@ -5,9 +5,26 @@
 }
 
 .search {
+  position: relative;
   margin-top: 16px;
 }
 
 .tabs {
   margin-top: 16px;
+}
+
+.searchClear {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+
+  svg path {
+    fill: var(--primary-color);
+  }
 }

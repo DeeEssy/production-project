@@ -12,6 +12,8 @@ import { Input } from 'shared/ui/Input/Input';
 import { SortOrder } from 'shared/types';
 import { useDebounce } from 'shared/lib/hooks/useDebounce/useDebounce';
 import { ArticleType } from 'entities/Article/model/types/article';
+import { Button } from 'shared/ui/Button/Button';
+import ClearIcon from 'shared/assets/icons/close.svg';
 import { fetchArticles } from '../../model/services/fetchArticles/fetchArticles';
 import cls from './ArticlesPageFilters.module.scss';
 import { getArticlesView } from '../../model/selectors/getArticlesView/getArticlesView';
@@ -69,6 +71,12 @@ export const ArticlesPageFilters = memo((props: ArticlesPageFiltersProps) => {
     fetchData();
   }, [dispatch, fetchData]);
 
+  const clearSearchValue = useCallback(() => {
+    dispatch(articlesActions.setSearch(''));
+    dispatch(articlesActions.setPage(1));
+    fetchData();
+  }, [dispatch, fetchData]);
+
   return (
     <div className={classNames(cls.articlesPageFilters, {}, [className])}>
       <div className={cls.sortWrapper}>
@@ -86,6 +94,11 @@ export const ArticlesPageFilters = memo((props: ArticlesPageFiltersProps) => {
           value={search}
           placeholder={t('search')}
         />
+        {search && (
+        <Button className={cls.searchClear} onClick={clearSearchValue}>
+          <ClearIcon />
+        </Button>
+        )}
       </Card>
       <ArticleTypeTabs
         value={type}
