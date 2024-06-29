@@ -13,7 +13,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks'],
+  plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks', 'kenshimoral-fsd-path-checker'],
   rules: {
     'react/jsx-indent': [2, 2],
     'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.tsx', '.ts'] }],
@@ -41,6 +41,7 @@ module.exports = {
     'no-param-reassign': 0,
     'no-undef': 'off',
     'react/no-array-index-key': 0,
+    'kenshimoral-fsd-path-checker/path-checker': 'error',
   },
   globals: {
     __IS_DEV__: true,

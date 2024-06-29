@@ -5,7 +5,7 @@ import { Sidebar } from 'widgets/Sidebar';
 import { Suspense, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getUserAuthInited, userActions } from 'entities/User';
-import { PageLoader } from 'shared/ui/PageLoader';
+import { PageLoader } from 'widgets/PageLoader';
 import { AppRouter } from './providers/router';
 
 const App = () => {
