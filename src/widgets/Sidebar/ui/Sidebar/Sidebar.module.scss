@@ -12,9 +12,6 @@
   bottom: 10px;
   left: 0;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .themeSwitcher {
@@ -29,6 +26,7 @@
   position: absolute;
   right: -32px;
   bottom: 32px;
+  z-index: 1;
 }
 
 .items {

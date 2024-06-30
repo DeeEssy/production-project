@@ -31,7 +31,10 @@ module.exports = {
     'import/extensions': 0,
     'import/no-extraneous-dependencies': 0,
     'no-underscore-dangle': 0,
-    'i18next/no-literal-string': [2, { markupOnly: true, ignoreAttribute: ['data-testid', 'target', 'direction', 'justify', 'gap', 'align'] }],
+    'i18next/no-literal-string': [2, {
+      markupOnly: true,
+      ignoreAttribute: ['data-testid', 'target', 'direction', 'justify', 'gap', 'align', 'role'],
+    }],
     'max-len': [2, { ignoreComments: true, code: 150 }],
     'jsx-a11y/no-static-element-interactions': 0,
     'jsx-a11y/click-events-have-key-events': 0,
