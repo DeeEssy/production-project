@@ -11,7 +11,7 @@ import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { memo, useCallback } from 'react';
 import { useParams } from 'react-router-dom';
 import { getUserAuthData } from 'entities/User';
-import cls from './ProfilePageHeader.module.scss';
+import { HStack } from 'shared/ui/Stack';
 
 interface ProfilePageHeaderProps {
     className?: string;
@@ -39,13 +39,12 @@ export const ProfilePageHeader = memo(({ className }: ProfilePageHeaderProps) =>
   }, [dispatch, profileId]);
 
   return (
-    <div className={classNames(cls.profilePageHeader, {}, [className])}>
+    <HStack max justify="between" className={classNames('', {}, [className])}>
       <Text title={t('profile')} />
       { isEditable && (
         readonly
           ? (
             <Button
-              className={cls.editBtn}
               theme={ThemeButton.OUTLINE}
               onClick={onEdit}
             >
@@ -53,9 +52,8 @@ export const ProfilePageHeader = memo(({ className }: ProfilePageHeaderProps) =>
             </Button>
           )
           : (
-            <>
+            <HStack gap="8">
               <Button
-                className={cls.editBtn}
                 theme={ThemeButton.OUTLINE_RED}
                 onClick={onCancelEdit}
                 disabled={isLoading}
@@ -63,16 +61,15 @@ export const ProfilePageHeader = memo(({ className }: ProfilePageHeaderProps) =>
                 {t('undo')}
               </Button>
               <Button
-                className={cls.saveBtn}
                 theme={ThemeButton.OUTLINE}
                 onClick={onSave}
                 disabled={isLoading}
               >
                 {t('save')}
               </Button>
-            </>
+            </HStack>
           )
       )}
-    </div>
+    </HStack>
   );
 });

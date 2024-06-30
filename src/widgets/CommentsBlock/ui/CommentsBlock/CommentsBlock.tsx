@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { CommentList, CommentType } from 'entities/Comment';
 import { Text, TextSize } from 'shared/ui/Text/Text';
 import { AddCommentForm } from 'features/AddCommentForm';
+import { VStack } from 'shared/ui/Stack';
 import cls from './CommentsBlock.module.scss';
 
 interface CommentsBlockProps {
@@ -20,7 +21,7 @@ export const CommentsBlock = memo(({
   const { t } = useTranslation();
 
   return (
-    <div className={classNames(cls.commentsBlock, {}, [className])}>
+    <VStack max gap="16" className={classNames(cls.commentsBlock, {}, [className])}>
       {!isLoading && (
       <>
         <Text size={TextSize.L} className={classNames(cls.title)} title={t('comments')} />
@@ -28,6 +29,6 @@ export const CommentsBlock = memo(({
       </>
       )}
       <CommentList error={error} isLoading={isLoading} comments={comments} />
-    </div>
+    </VStack>
   );
 });

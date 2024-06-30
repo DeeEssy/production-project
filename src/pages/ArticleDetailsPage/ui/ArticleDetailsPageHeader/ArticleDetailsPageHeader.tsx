@@ -6,8 +6,8 @@ import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { Button, ThemeButton } from 'shared/ui/Button/Button';
 import { useSelector } from 'react-redux';
 import { getCurrentArticleData } from 'entities/Article';
+import { HStack } from 'shared/ui/Stack';
 import { getArticleCanEdit } from '../../model/selectors/getArticleCanEdit/getArticleCanEdit';
-import cls from './ArticleDetailsPageHeader.module.scss';
 
 interface ArticleDetailsPageHeaderProps {
     className?: string;
@@ -29,19 +29,18 @@ export const ArticleDetailsPageHeader = memo((props: ArticleDetailsPageHeaderPro
   }, [navigate]);
 
   return (
-    <div className={classNames(cls.articleDetailsPageHeader, {}, [className])}>
-      <Button className={cls.backButton} theme={ThemeButton.OUTLINE} onClick={onBackToList}>
+    <HStack max justify="between" className={classNames('', {}, [className])}>
+      <Button theme={ThemeButton.OUTLINE} onClick={onBackToList}>
         {t('back_to_articles')}
       </Button>
       {canEdit && (
         <Button
-          className={cls.editBtn}
           theme={ThemeButton.OUTLINE}
           onClick={onEditArticle}
         >
           {t('edit')}
         </Button>
       )}
-    </div>
+    </HStack>
   );
 });

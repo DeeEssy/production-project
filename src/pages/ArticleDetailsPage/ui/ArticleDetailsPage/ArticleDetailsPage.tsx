@@ -11,6 +11,7 @@ import { Loader } from 'shared/ui/Loader/Loader';
 import { Page } from 'widgets/Page/Page';
 import { Text, TextSize } from 'shared/ui/Text/Text';
 import { useTranslation } from 'react-i18next';
+import { VStack } from 'shared/ui/Stack';
 import { articleDetailsPageReducer } from '../../model/slices';
 import { getNormalizeArticleRecommendations } from '../../model/selectors/getNormalizeArticleRecommendations/getNormalizeArticleRecommendations';
 import { getArticleCommentsIsLoading }
@@ -58,16 +59,18 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
     <DynamicModuleLoader reducers={initialReducers}>
       <Suspense fallback={<Loader />}>
         <Page className={classNames(cls.articleDetailsPage, {}, [className])}>
-          <ArticleDetailsPageHeader />
-          <ArticleDetails id={Number(id)} />
-          <Text size={TextSize.L} title={t('recommendations')} />
-          <ArticleList target="_blank" className={cls.recommendations} articles={recommendations} isLoading={isRecommendationsLoading} />
-          <CommentsBlock
-            onSendComment={onSendComment}
-            error={commentsError}
-            isLoading={isCommentsLoading}
-            comments={comments}
-          />
+          <VStack max gap="16">
+            <ArticleDetailsPageHeader />
+            <ArticleDetails id={Number(id)} />
+            <Text size={TextSize.L} title={t('recommendations')} />
+            <ArticleList target="_blank" className={cls.recommendations} articles={recommendations} isLoading={isRecommendationsLoading} />
+            <CommentsBlock
+              onSendComment={onSendComment}
+              error={commentsError}
+              isLoading={isCommentsLoading}
+              comments={comments}
+            />
+          </VStack>
         </Page>
       </Suspense>
     </DynamicModuleLoader>
