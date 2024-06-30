@@ -37,5 +37,6 @@
     "no_articles": "No articles found",
     "recommendations": "Recommendations",
     "application_name": "Articles App",
-    "create_article": "Create article"
+    "create_article": "Create article",
+    "profile": "Profile"
 }

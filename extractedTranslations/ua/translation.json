@@ -60,5 +60,7 @@
   "your_currency": "your_currency",
   "your_firstname": "your_firstname",
   "your_lastname": "your_lastname",
-  "your_username": "your_username"
+  "your_username": "your_username",
+  "Выйти": "Выйти",
+  "Профиль": "Профиль"
 }
