@@ -38,5 +38,6 @@
     "recommendations": "Рекомендацii",
     "application_name": "Articles App",
     "create_article": "Створити статтю",
-    "profile": "Профiль"
+    "profile": "Профiль",
+    "article_error": "Щось пiйшло не так"
 }

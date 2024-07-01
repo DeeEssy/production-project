@@ -914,6 +914,18 @@
       "userId": 1,
       "text": "dasdas",
       "id": 9
+    },
+    {
+      "articleId": 2,
+      "userId": 1,
+      "text": "dasdasdas",
+      "id": 10
+    },
+    {
+      "articleId": 18,
+      "userId": 1,
+      "text": "dsadasd",
+      "id": 11
     }
   ],
   "users": [

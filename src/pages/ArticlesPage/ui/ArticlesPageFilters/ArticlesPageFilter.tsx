@@ -14,14 +14,11 @@ import { useDebounce } from 'shared/lib/hooks/useDebounce/useDebounce';
 import { ArticleType } from 'entities/Article/model/types/article';
 import { Button } from 'shared/ui/Button/Button';
 import ClearIcon from 'shared/assets/icons/close.svg';
-import { fetchArticles } from '../../model/services/fetchArticles/fetchArticles';
+import {
+  articlesActions,
+  fetchArticles, getArticlesOrder, getArticlesSearch, getArticlesSort, getArticlesType, getArticlesView,
+} from 'widgets/InfiniteArticlesList';
 import cls from './ArticlesPageFilters.module.scss';
-import { getArticlesView } from '../../model/selectors/getArticlesView/getArticlesView';
-import { articlesActions } from '../../model/slices/articles';
-import { getArticlesOrder } from '../../model/selectors/getArticlesOrder/getArticlesOrder';
-import { getArticlesSearch } from '../../model/selectors/getArticlesSearch/getArticlesSearch';
-import { getArticlesSort } from '../../model/selectors/getArticlesSort/getArticlesSort';
-import { getArticlesType } from '../../model/selectors/getArticlesType/getArticlesType';
 
 interface ArticlesPageFiltersProps {
     className?: string;

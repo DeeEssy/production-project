@@ -12,11 +12,13 @@ import { ScrollSaverSchema } from 'features/ScrollSaver';
 import { ArticleDetailsPageSchema } from 'pages/ArticleDetailsPage';
 
 import { ArticlesSchema } from 'pages/ArticlesPage';
+import { rtkApi } from 'shared/api/rtkApi';
 
 export interface StateSchema {
     counter: CounterSchema;
     user: UserSchema;
     scrollSaver: ScrollSaverSchema;
+    [rtkApi.reducerPath]: ReturnType<typeof rtkApi.reducer>;
 
     // Async reducers
     loginForm?: LoginSchema;

@@ -38,5 +38,6 @@
     "recommendations": "Recommendations",
     "application_name": "Articles App",
     "create_article": "Create article",
-    "profile": "Profile"
+    "profile": "Profile",
+    "article_error": "Something goes wrong"
 }

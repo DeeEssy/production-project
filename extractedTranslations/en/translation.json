@@ -4,6 +4,7 @@
   "application_name": "application_name",
   "article_create": "article_create",
   "article_edit": "article_edit",
+  "article_error": "article_error",
   "back_to_articles": "back_to_articles",
   "by": "by",
   "comments": "comments",
@@ -62,5 +63,6 @@
   "your_lastname": "your_lastname",
   "your_username": "your_username",
   "Выйти": "Выйти",
+  "Ошибка при загрузке статей": "Ошибка при загрузке статей",
   "Профиль": "Профиль"
 }
