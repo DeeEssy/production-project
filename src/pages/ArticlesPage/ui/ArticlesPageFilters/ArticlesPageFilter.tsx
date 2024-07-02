@@ -4,6 +4,13 @@ import { memo, useCallback } from 'react';
 import {
   ArticleSortField, ArticleView, ArticleViewSelector, ArticleSortSelector,
   ArticleTypeTabs,
+  getArticlesView,
+  getArticlesSort,
+  getArticlesOrder,
+  getArticlesSearch,
+  getArticlesType,
+  fetchArticles,
+  articlesActions,
 } from 'entities/Article';
 import { useSelector } from 'react-redux';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
@@ -14,10 +21,6 @@ import { useDebounce } from 'shared/lib/hooks/useDebounce/useDebounce';
 import { ArticleType } from 'entities/Article/model/types/article';
 import { Button } from 'shared/ui/Button/Button';
 import ClearIcon from 'shared/assets/icons/close.svg';
-import {
-  articlesActions,
-  fetchArticles, getArticlesOrder, getArticlesSearch, getArticlesSort, getArticlesType, getArticlesView,
-} from 'widgets/InfiniteArticlesList';
 import cls from './ArticlesPageFilters.module.scss';
 
 interface ArticlesPageFiltersProps {

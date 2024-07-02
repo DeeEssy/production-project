@@ -14,7 +14,7 @@ import { getCurrentArticleData } from '../../model/selectors/getCurrentArticleDa
 import { getCurrentArticleIsLoading }
   from '../../model/selectors/getCurrentArticleIsLoading/getCurrentArticleIsLoading';
 import { getCurrentArticleError } from '../../model/selectors/getCurrentArticleError/getCurrentArticleError';
-import { currentArticleReducer } from '../../model/slice/currentArticleSlice';
+import { currentArticleReducer } from '../../model/slices/currentArticleSlice';
 import cls from './ArticleDetails.module.scss';
 import { fetchCurrentArticle } from '../../model/services/fetchCurrentArticle/fetchCurrentArticle';
 import { ArticleBlock, ArticleBlockType } from '../../model/types/article';

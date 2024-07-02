@@ -1,12 +1,10 @@
 import { useTranslation } from 'react-i18next';
 import { memo } from 'react';
 import { useSelector } from 'react-redux';
-import { ArticleList } from 'entities/Article';
+import {
+  ArticleList, getArticlesError, getArticlesIsLoading, getArticlesView, getNormalizeArticles,
+} from 'entities/Article';
 import { Text } from 'shared/ui/Text/Text';
-import { getArticlesIsLoading } from '../model/selectors/getArticlesIsLoading/getArticlesIsLoading';
-import { getNormalizeArticles } from '../model/selectors/getNormalizeArticles/getNormalizeArticles';
-import { getArticlesView } from '../model/selectors/getArticlesView/getArticlesView';
-import { getArticlesError } from '../model/selectors/getArticlesError/getArticlesError';
 
 interface ArticleInfiniteListProps {
     className?: string;
