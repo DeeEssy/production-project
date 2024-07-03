@@ -1,10 +1,11 @@
 import { Story } from '@storybook/react';
+
 import { StateSchema, StoreProvider } from 'app/providers/StoreProvider';
-import { articlesReducer, currentArticleReducer } from 'entities/Article';
-import { profileReducer } from 'entities/Profile';
+import { articleDetailsPageReducer } from 'pages/ArticleDetailsPage';
 import { addCommentFormReducer } from 'features/AddCommentForm';
 import { loginReducer } from 'features/AuthByUsername';
-import { articleDetailsPageReducer } from 'pages/ArticleDetailsPage';
+import { profileReducer } from 'features/EditableProfileCard';
+import { articlesReducer, currentArticleReducer } from 'entities/Article';
 import { ReducerList } from 'shared/lib';
 
 const defaultAsyncReducers: ReducerList = {

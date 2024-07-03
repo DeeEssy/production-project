@@ -1,7 +1,7 @@
-import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 import { UserRole } from 'entities/User';
+
 import { ArticleList } from './ArticleList';
 import {
   Article, ArticleBlockType, ArticleType, ArticleView,

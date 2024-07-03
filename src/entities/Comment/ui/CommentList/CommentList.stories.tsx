@@ -1,7 +1,7 @@
-import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { UserRole } from 'entities/User';
+
 import { CommentList } from './CommentList';
 
 export default {

@@ -1,7 +1,9 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+
+import { Theme } from 'app/providers/ThemeProvider';
 import { UserRole } from 'entities/User';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Theme } from 'app/providers/ThemeProvider';
+
 import { Comment } from './Comment';
 
 export default {

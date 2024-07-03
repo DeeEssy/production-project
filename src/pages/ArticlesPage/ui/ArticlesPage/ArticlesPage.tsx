@@ -9,9 +9,9 @@ import { Page } from 'widgets/Page';
 import { useSearchParams } from 'react-router-dom';
 import { InfiniteArticlesList } from 'widgets/InfiniteArticlesList';
 import { articlesReducer, fetchNextArticlesPage, getArticlesIsLoading } from 'entities/Article';
+import { ArticlesPageFilters } from 'widgets/ArticlesPageFilters';
 import cls from './ArticlesPage.module.scss';
 import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage';
-import { ArticlesPageFilters } from '../ArticlesPageFilters/ArticlesPageFilter';
 
 interface ArticlesPageProps {
     className?: string;

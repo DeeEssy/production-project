@@ -1,8 +1,10 @@
-import { classNames } from 'shared/lib';
-import { Button, ThemeButton } from 'shared/ui/Button/Button';
-import { useTranslation } from 'react-i18next';
-import { Locale } from 'shared/config/i18n/locales';
 import { memo } from 'react';
+import { useTranslation } from 'react-i18next';
+
+import { Button, ThemeButton } from 'shared/ui/Button/Button';
+import { classNames } from 'shared/lib';
+import { Locale } from 'shared/config/i18n/locales';
+
 import cls from './LanguageSwitcher.module.scss';
 
 interface LanguageSwitcherProps {

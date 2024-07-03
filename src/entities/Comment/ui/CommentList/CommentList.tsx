@@ -1,11 +1,13 @@
-import { classNames } from 'shared/lib/classNames/classNames';
 import { memo } from 'react';
-import { Text } from 'shared/ui/Text/Text';
 import { useTranslation } from 'react-i18next';
+
+import { classNames } from 'shared/lib/classNames/classNames';
+import { Text } from 'shared/ui/Text/Text';
 import { HStack, VStack } from 'shared/ui/Stack';
-import cls from './CommentList.module.scss';
+
 import { Comment } from '../Comment/Comment';
 import { Comment as CommentType } from '../../model/types/comment';
+import cls from './CommentList.module.scss';
 
 interface CommentListProps {
     className?: string;

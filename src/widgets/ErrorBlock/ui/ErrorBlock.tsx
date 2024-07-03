@@ -1,7 +1,9 @@
-import { classNames } from 'shared/lib';
-import { useTranslation } from 'react-i18next';
-import { Button } from 'shared/ui/Button/Button';
 import { memo } from 'react';
+import { useTranslation } from 'react-i18next';
+
+import { classNames } from 'shared/lib';
+import { Button } from 'shared/ui/Button/Button';
+
 import cls from './ErrorBlock.module.scss';
 
 interface ErrorBlockProps {

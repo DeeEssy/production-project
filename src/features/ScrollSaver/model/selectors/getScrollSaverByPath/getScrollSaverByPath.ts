@@ -1,5 +1,7 @@
-import { StateSchema } from 'app/providers/StoreProvider';
 import { createSelector } from '@reduxjs/toolkit';
+
+import { StateSchema } from 'app/providers/StoreProvider';
+
 import { getScroll } from '../getScroll/getScroll';
 
 export const getScrollSaverByPath = createSelector(

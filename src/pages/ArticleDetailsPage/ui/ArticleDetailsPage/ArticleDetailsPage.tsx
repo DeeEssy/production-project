@@ -1,16 +1,18 @@
-import { classNames } from 'shared/lib/classNames/classNames';
 import { Suspense, memo } from 'react';
-import { ArticleDetails } from 'entities/Article';
 import { useParams } from 'react-router-dom';
-import { DynamicModuleLoader, ReducerList } from 'shared/lib';
-import { Loader } from 'shared/ui/Loader/Loader';
+
 import { Page } from 'widgets/Page';
-import { VStack } from 'shared/ui/Stack';
 import { ArticleRecommendationsList } from 'widgets/ArticleRecommendationsList';
 import { ArticleComments } from 'widgets/ArticleComments';
+import { ArticleDetails } from 'entities/Article';
+import { classNames } from 'shared/lib/classNames/classNames';
+import { DynamicModuleLoader, ReducerList } from 'shared/lib';
+import { Loader } from 'shared/ui/Loader/Loader';
+import { VStack } from 'shared/ui/Stack';
+
 import { articleDetailsPageReducer } from '../../model/slices';
-import cls from './ArticleDetailsPage.module.scss';
 import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader';
+import cls from './ArticleDetailsPage.module.scss';
 
 interface ArticleDetailsPageProps {
     className?: string;
