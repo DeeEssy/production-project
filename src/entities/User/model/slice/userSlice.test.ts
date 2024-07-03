@@ -5,7 +5,7 @@ describe('userSlice', () => {
   const userData = {
     id: 1,
     username: 'username',
-    role: UserRole.ADMIN,
+    roles: [UserRole.ADMIN],
   };
 
   test('setAuthData', () => {

@@ -23,7 +23,7 @@ Light.args = {
       user: {
         id: 1,
         username: 'test',
-        role: UserRole.ADMIN,
+        roles: [UserRole.ADMIN],
         // eslint-disable-next-line max-len
         avatar: 'https://i.ytimg.com/vi/QRtoUoBgjDw/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD9sgvZwEXEC9cWQASAGwKiRJk5sw',
       },
@@ -34,7 +34,7 @@ Light.args = {
       user: {
         id: 2,
         username: 'test 2',
-        role: UserRole.USER,
+        roles: [UserRole.USER],
         // eslint-disable-next-line max-len
         avatar: 'https://i.ytimg.com/vi/QRtoUoBgjDw/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD9sgvZwEXEC9cWQASAGwKiRJk5sw',
       },

@@ -4,7 +4,7 @@ import { loginByUsername } from './loginByUsername';
 
 describe('loginByUsername', () => {
   test('success login', async () => {
-    const userValue = { username: '123', id: 1, role: UserRole.ADMIN };
+    const userValue = { username: '123', id: 1, roles: [UserRole.ADMIN] };
 
     const thunk = new TestAsyncThunk(loginByUsername);
 

@@ -39,5 +39,7 @@
     "application_name": "Articles App",
     "create_article": "Створити статтю",
     "profile": "Профiль",
-    "article_error": "Щось пiйшло не так"
+    "article_error": "Щось пiйшло не так",
+    "admin": "Адмiн",
+    "don't_have_rights": "У вас нема прав"
 }

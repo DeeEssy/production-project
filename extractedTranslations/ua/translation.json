@@ -1,5 +1,7 @@
 {
   "about": "about",
+  "admin": "admin",
+  "admin_panel": "admin_panel",
   "all_articles": "all_articles",
   "application_name": "application_name",
   "article_create": "article_create",
@@ -11,6 +13,7 @@
   "create_article": "create_article",
   "created_date": "created_date",
   "decreasing": "decreasing",
+  "don't_have_rights": "don't_have_rights",
   "economics": "economics",
   "edit": "edit",
   "enter": "enter",

@@ -39,5 +39,7 @@
     "application_name": "Articles App",
     "create_article": "Create article",
     "profile": "Profile",
-    "article_error": "Something goes wrong"
+    "article_error": "Something goes wrong",
+    "admin": "Admin",
+    "don't_have_rights": "You don't have enough rights to visit this page"
 }
