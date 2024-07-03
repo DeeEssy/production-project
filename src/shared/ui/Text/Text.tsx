@@ -45,12 +45,15 @@ export const Text = memo((props: TextProps) => {
     size = TextSize.M,
     theme = TextTheme.PRIMARY,
     align = TextAlign.LEFT,
+    ...otherProps
   } = props;
+
+  console.log(props);
 
   const HeaderTag = mapSizeToHeaderTag[size];
 
   return (
-    <div className={classNames(cls.Text, { [cls[theme]]: true, [cls[align]]: true, [cls[size]]: true }, [className])}>
+    <div className={classNames(cls.Text, { [cls[theme]]: true, [cls[align]]: true, [cls[size]]: true }, [className])} {...otherProps}>
       {title && <HeaderTag className={cls.title}>{title}</HeaderTag>}
       {text && <p className={cls.text}>{text}</p>}
     </div>

@@ -1,7 +1,6 @@
 import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
 
 import { getUserAuthData } from 'entities/User';
 import { classNames } from 'shared/lib/classNames/classNames';
@@ -17,16 +16,16 @@ import { updateProfileData } from '../../model/services/updateProfileData/update
 
 interface EditableProfileCardHeaderProps {
     className?: string;
+    id: number;
 }
 
-export const EditableProfileCardHeader = memo(({ className }: EditableProfileCardHeaderProps) => {
+export const EditableProfileCardHeader = memo(({ className, id }: EditableProfileCardHeaderProps) => {
   const { t } = useTranslation('profilePage');
-  const { id: profileId } = useParams<{id: string}>();
   const dispatch = useAppDispatch();
   const readonly = useSelector(getProfileReadonly);
   const isLoading = useSelector(getProfileIsLoading);
   const user = useSelector(getUserAuthData);
-  const isEditable = Number(profileId) === user?.id;
+  const isEditable = Number(id) === user?.id;
 
   const onEdit = useCallback(() => {
     dispatch(profileActions.setReadonly(false));
@@ -37,8 +36,8 @@ export const EditableProfileCardHeader = memo(({ className }: EditableProfileCar
   }, [dispatch]);
 
   const onSave = useCallback(async () => {
-    await dispatch(updateProfileData(Number(profileId)));
-  }, [dispatch, profileId]);
+    await dispatch(updateProfileData(Number(id)));
+  }, [dispatch, id]);
 
   return (
     <HStack max justify="between" className={classNames('', {}, [className])}>
@@ -49,6 +48,7 @@ export const EditableProfileCardHeader = memo(({ className }: EditableProfileCar
             <Button
               theme={ThemeButton.OUTLINE}
               onClick={onEdit}
+              data-testid="profile-card-edit-btn"
             >
               {t('edit')}
             </Button>
@@ -59,6 +59,7 @@ export const EditableProfileCardHeader = memo(({ className }: EditableProfileCar
                 theme={ThemeButton.OUTLINE_RED}
                 onClick={onCancelEdit}
                 disabled={isLoading}
+                data-testid="profile-card-undo-btn"
               >
                 {t('undo')}
               </Button>
@@ -66,6 +67,7 @@ export const EditableProfileCardHeader = memo(({ className }: EditableProfileCar
                 theme={ThemeButton.OUTLINE}
                 onClick={onSave}
                 disabled={isLoading}
+                data-testid="profile-card-save-btn"
               >
                 {t('save')}
               </Button>

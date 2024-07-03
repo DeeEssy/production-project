@@ -69,6 +69,7 @@ export const ProfileCard = memo(({
         placeholder={t('your_firstname')}
         className={cls.input}
         readonly={readonly}
+        data-testid="profile-card-firstname"
       />
       <Input
         value={data?.lastname}
@@ -76,6 +77,7 @@ export const ProfileCard = memo(({
         placeholder={t('your_lastname')}
         className={cls.input}
         readonly={readonly}
+        data-testid="profile-card-lastname"
       />
       <Input
         type="number"
