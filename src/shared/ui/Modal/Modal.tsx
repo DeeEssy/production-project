@@ -5,6 +5,7 @@ import React, {
 import { useTheme } from 'app/providers/ThemeProvider';
 import { Portal } from '../Portal/Portal';
 import cls from './Modal.module.scss';
+import { Overlay } from '../Overlay/Overlay';
 
 interface ModalProps {
   className?: string;
@@ -29,10 +30,6 @@ export const Modal: FC<ModalProps> = (props) => {
   const [isMounted, setIsMounted] = useState(false);
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const { theme } = useTheme();
-
-  const onContentClick = (e: React.MouseEvent) => {
-    e.stopPropagation();
-  };
 
   const closeHandler = useCallback(() => {
     if (onClose) {
@@ -86,16 +83,11 @@ export const Modal: FC<ModalProps> = (props) => {
         )}
       >
         <div
-          className={classNames(cls.overlay)}
-          onClick={closeHandler}
+          className={classNames(cls.content)}
         >
-          <div
-            className={classNames(cls.content)}
-            onClick={onContentClick}
-          >
-            { children }
-          </div>
+          { children }
         </div>
+        <Overlay onClick={closeHandler} />
       </div>
     </Portal>
   );
