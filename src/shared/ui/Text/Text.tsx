@@ -48,8 +48,6 @@ export const Text = memo((props: TextProps) => {
     ...otherProps
   } = props;
 
-  console.log(props);
-
   const HeaderTag = mapSizeToHeaderTag[size];
 
   return (
