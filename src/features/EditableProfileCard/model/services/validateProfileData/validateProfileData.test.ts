@@ -2,7 +2,7 @@ import { Country } from 'entities/Country';
 import { Currency } from 'entities/Currency';
 import { Profile } from 'entities/Profile';
 import { validateProfileData } from './validateProfileData';
-import { ValidateProfileError } from '../../types/editableProfileCard';
+import { ValidateProfileError } from '../../types/enums/validateProfileErrors';
 
 const data: Profile = {
   id: 1,

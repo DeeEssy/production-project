@@ -9,7 +9,7 @@ import { ComponentRender } from 'shared/lib/tests/componentRender/componentRende
 
 import { profileReducer } from '../../model/slice/profileSlice';
 import { EditableProfileCard } from './EditableProfileCard';
-import { ValidateProfileError } from '../../model/types/editableProfileCard';
+import { ValidateProfileError } from '../../model/types/enums/validateProfileErrors';
 
 const profile: Profile = {
   id: 1,

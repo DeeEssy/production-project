@@ -1,9 +1,10 @@
 export { ArticleDetails } from './ui/ArticleDetails/ArticleDetails';
+export type { Article } from './model/types/interfaces/articles';
 export {
-  Article, ArticleView, ArticleSortField, ArticleType,
-} from './model/types/article';
+  ArticleView, ArticleSortField, ArticleType, ArticleBlockType,
+} from './model/types/enums/article';
 export { currentArticleReducer, currentArticleActions } from './model/slices/currentArticleSlice';
-export { ArticleDetailsSchema } from './model/types/articleDetailsSchema';
+export type { ArticleDetailsSchema } from './model/types/interfaces/articleDetailsSchema';
 export { getCurrentArticleError } from './model/selectors/getCurrentArticleError/getCurrentArticleError';
 export { getCurrentArticleData } from './model/selectors/getCurrentArticleData/getCurrentArticleData';
 export { getCurrentArticleIsLoading } from './model/selectors/getCurrentArticleIsLoading/getCurrentArticleIsLoading';
@@ -22,5 +23,5 @@ export { getArticlesType } from './model/selectors/getArticlesType/getArticlesTy
 export { fetchArticles } from './model/services/fetchArticles/fetchArticles';
 export { articlesActions, articlesReducer } from './model/slices/articles';
 export { getArticlesInited } from './model/selectors/getArticlesInited/getArticlesInited';
-export { ArticlesSchema } from './model/types/articles';
+export type { ArticlesSchema } from './model/types/interfaces/articles';
 export { fetchNextArticlesPage } from './model/services/fetchNextArticlesPage/fetchNextArticlesPage';

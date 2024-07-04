@@ -1,7 +1,8 @@
 import { UserRole } from 'entities/User';
-import { ArticleDetailsSchema } from '../types/articleDetailsSchema';
+import { ArticleDetailsSchema } from '../types/interfaces/articleDetailsSchema';
 import { currentArticleReducer } from './currentArticleSlice';
-import { Article, ArticleBlockType, ArticleType } from '../types/article';
+import { Article } from '../types/interfaces/articles';
+import { ArticleBlockType, ArticleType } from '../types/enums/article';
 import { fetchCurrentArticle } from '../services/fetchCurrentArticle/fetchCurrentArticle';
 
 const article: Article = {

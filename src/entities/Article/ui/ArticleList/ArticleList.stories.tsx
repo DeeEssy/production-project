@@ -3,9 +3,8 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { UserRole } from 'entities/User';
 
 import { ArticleList } from './ArticleList';
-import {
-  Article, ArticleBlockType, ArticleType, ArticleView,
-} from '../../model/types/article';
+import { Article } from '../../model/types/interfaces/articles';
+import { ArticleBlockType, ArticleType, ArticleView } from '../../model/types/enums/article';
 
 export default {
   title: 'entities/Article/ArticleList',

@@ -3,7 +3,8 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { UserRole } from 'entities/User';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 
-import { ArticleBlockType, ArticleType, Article } from '../../model/types/article';
+import { Article } from '../../model/types/interfaces/articles';
+import { ArticleBlockType, ArticleType } from '../../model/types/enums/article';
 import { ArticleDetails } from './ArticleDetails';
 
 export default {

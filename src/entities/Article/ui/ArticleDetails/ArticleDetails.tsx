@@ -18,7 +18,8 @@ import { getCurrentArticleIsLoading }
 import { getCurrentArticleError } from '../../model/selectors/getCurrentArticleError/getCurrentArticleError';
 import { currentArticleReducer } from '../../model/slices/currentArticleSlice';
 import { fetchCurrentArticle } from '../../model/services/fetchCurrentArticle/fetchCurrentArticle';
-import { ArticleBlock, ArticleBlockType } from '../../model/types/article';
+import { ArticleBlock } from '../../model/types/interfaces/articleBlocks';
+import { ArticleBlockType } from '../../model/types/enums/article';
 import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent';
 import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';

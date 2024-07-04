@@ -3,7 +3,7 @@ import { Country } from 'entities/Country';
 import { Currency } from 'entities/Currency';
 import { Profile } from 'entities/Profile';
 import { updateProfileData } from './updateProfileData';
-import { ValidateProfileError } from '../../types/editableProfileCard';
+import { ValidateProfileError } from '../../types/enums/validateProfileErrors';
 
 const form: Profile = {
   username: 'admin',

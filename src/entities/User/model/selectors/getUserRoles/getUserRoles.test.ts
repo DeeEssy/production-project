@@ -1,7 +1,7 @@
 import { StateSchema } from 'app/providers/StoreProvider';
 
 import { getUserRoles } from './getUserRoles';
-import { UserRole } from '../../types/user';
+import { UserRole } from '../../types/enums/user';
 
 describe('getUserRoles', () => {
   const userData = {

@@ -1,10 +1,10 @@
 import { PayloadAction, createEntityAdapter, createSlice } from '@reduxjs/toolkit';
+
 import { SortOrder } from 'shared/types';
-import { ArticlesSchema } from '../types/articles';
+
+import { ArticlesSchema, Article } from '../types/interfaces/articles';
+import { ArticleSortField, ArticleType, ArticleView } from '../types/enums/article';
 import { fetchArticles } from '../services/fetchArticles/fetchArticles';
-import {
-  Article, ArticleSortField, ArticleType, ArticleView,
-} from '../types/article';
 
 export const articlesAdapter = createEntityAdapter<Article>({
   selectId: (article) => article.id,

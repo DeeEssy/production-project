@@ -1,8 +1,10 @@
 import { Country } from 'entities/Country';
 import { Currency } from 'entities/Currency';
+
 import { profileReducer, profileActions } from './profileSlice';
 import { updateProfileData } from '../services/updateProfileData/updateProfileData';
-import { ProfileSchema, ValidateProfileError } from '../types/editableProfileCard';
+import { ValidateProfileError } from '../types/enums/validateProfileErrors';
+import { ProfileSchema } from '../types/interfaces/editableProfileCard';
 
 const form = {
   username: 'admin',

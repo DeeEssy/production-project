@@ -1,4 +1,5 @@
-import { UserRole, UserSchema } from '../types/user';
+import { UserSchema } from '../types/interfaces/user';
+import { UserRole } from '../types/enums/user';
 import { userReducer, userActions } from './userSlice';
 
 describe('userSlice', () => {

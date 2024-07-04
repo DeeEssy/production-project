@@ -8,7 +8,8 @@ import { Text, TextSize } from 'shared/ui/Text/Text';
 
 import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
-import { Article, ArticleView } from '../../model/types/article';
+import { Article } from '../../model/types/interfaces/articles';
+import { ArticleView } from '../../model/types/enums/article';
 import cls from './ArticleList.module.scss';
 
 interface ArticleListProps {

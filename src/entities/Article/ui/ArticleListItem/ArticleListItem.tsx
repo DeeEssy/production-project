@@ -11,9 +11,9 @@ import { Button, ThemeButton } from 'shared/ui/Button/Button';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { AppLink } from 'shared/ui/AppLink/AppLink';
 
-import {
-  Article, ArticleBlockType, ArticleTextBlock, ArticleView,
-} from '../../model/types/article';
+import { Article } from '../../model/types/interfaces/articles';
+import { ArticleBlockType, ArticleView } from '../../model/types/enums/article';
+import { ArticleTextBlock } from '../../model/types/interfaces/articleBlocks';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 import cls from './ArticleListItem.module.scss';
 

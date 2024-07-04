@@ -11,6 +11,7 @@ import {
   getArticlesType,
   fetchArticles,
   articlesActions,
+  ArticleType,
 } from 'entities/Article';
 import { useSelector } from 'react-redux';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
@@ -18,7 +19,6 @@ import { Card } from 'shared/ui/Card/Card';
 import { Input } from 'shared/ui/Input/Input';
 import { SortOrder } from 'shared/types';
 import { useDebounce } from 'shared/lib/hooks/useDebounce/useDebounce';
-import { ArticleType } from 'entities/Article/model/types/article';
 import { Button } from 'shared/ui/Button/Button';
 import ClearIcon from 'shared/assets/icons/close.svg';
 import cls from './ArticlesPageFilters.module.scss';

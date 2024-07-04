@@ -1,7 +1,7 @@
 import { StateSchema } from 'app/providers/StoreProvider';
 
 import { getIsUserManager } from './getIsUserManager';
-import { UserRole } from '../../types/user';
+import { UserRole } from '../../types/enums/user';
 
 describe('getIsUserManager', () => {
   const userData = {

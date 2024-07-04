@@ -1,6 +1,6 @@
 import { StateSchema } from 'app/providers/StoreProvider';
 import { getCurrentArticleData } from './getCurrentArticleData';
-import { ArticleBlockType, ArticleType } from '../../types/article';
+import { ArticleBlockType, ArticleType } from '../../types/enums/article';
 
 const article = {
   id: 1,

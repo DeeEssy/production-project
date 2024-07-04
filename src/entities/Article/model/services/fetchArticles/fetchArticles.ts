@@ -7,7 +7,8 @@ import { getArticlesSearch } from '../../selectors/getArticlesSearch/getArticles
 import { getArticlesSort } from '../../selectors/getArticlesSort/getArticlesSort';
 import { getArticlesOrder } from '../../selectors/getArticlesOrder/getArticlesOrder';
 import { getArticlesType } from '../../selectors/getArticlesType/getArticlesType';
-import { Article, ArticleType } from '../../types/article';
+import { Article } from '../../types/interfaces/articles';
+import { ArticleType } from '../../types/enums/article';
 
 interface FetchArticlesListProps {
   replace?: boolean;
