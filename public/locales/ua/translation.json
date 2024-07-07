@@ -41,5 +41,8 @@
     "profile": "Профiль",
     "article_error": "Щось пiйшло не так",
     "admin": "Адмiн",
-    "don't_have_rights": "У вас нема прав"
+    "don't_have_rights": "У вас нема прав",
+    "your_review": "Ваш вiдгук",
+    "send_review": "Вiдправити",
+    "close_review": "Закрити"
 }
