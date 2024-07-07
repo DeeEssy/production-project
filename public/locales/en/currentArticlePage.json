@@ -1,5 +1,7 @@
 {
     "error_the_article_not_found": "The article not found",
     "back_to_articles": "Back to articles",
-    "edit": "Edit"
+    "edit": "Edit",
+    "rate_article": "Rate this article",
+    "rate_article_text": "Leave your review, it will help us improving quality"
 }

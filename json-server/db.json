@@ -1,4 +1,89 @@
 {
+  "article-ratings": [
+    {
+      "id": 1,
+      "rate": 4,
+      "feedback": "good article",
+      "userId": 1,
+      "articleId": 1
+    },
+    {
+      "id": 2,
+      "rate": 4,
+      "feedback": "good article",
+      "userId": 1,
+      "articleId": 2
+    },
+    {
+      "userId": 1,
+      "articleId": 3,
+      "rate": 3,
+      "feedback": "",
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "articleId": 9,
+      "rate": 5,
+      "feedback": "test",
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "articleId": 10,
+      "rate": 1,
+      "feedback": "test test",
+      "id": 3
+    },
+    {
+      "userId": 1,
+      "articleId": 7,
+      "rate": 3,
+      "feedback": "bad article",
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "articleId": 1,
+      "rate": 3,
+      "id": 4
+    },
+    {
+      "userId": 1,
+      "articleId": 1,
+      "rate": 4,
+      "feedback": "",
+      "id": 5
+    },
+    {
+      "userId": 1,
+      "articleId": 1,
+      "rate": 4,
+      "feedback": "",
+      "id": 6
+    },
+    {
+      "userId": 1,
+      "articleId": 5,
+      "rate": 4,
+      "feedback": "",
+      "id": 7
+    },
+    {
+      "userId": 1,
+      "articleId": 28,
+      "rate": 1,
+      "feedback": "",
+      "id": 8
+    },
+    {
+      "userId": 1,
+      "articleId": 6,
+      "rate": 4,
+      "feedback": "test testtest12321312",
+      "id": 9
+    }
+  ],
   "notifications": [
     {
       "id": 1,
@@ -967,14 +1052,18 @@
       "id": 1,
       "username": "admin",
       "password": "admin",
-      "roles": ["ADMIN"],
+      "roles": [
+        "ADMIN"
+      ],
       "avatar": "https://cdn.pixabay.com/photo/2016/08/12/08/01/door-1587863_1280.jpg"
     },
     {
       "id": 2,
       "username": "user",
       "password": "user",
-      "roles": ["USER"],
+      "roles": [
+        "USER"
+      ],
       "avatar": "https://i.ytimg.com/vi/QRtoUoBgjDw/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD9sgvZwEXEC9cWQASAGwKiRJk5sw"
     }
   ],

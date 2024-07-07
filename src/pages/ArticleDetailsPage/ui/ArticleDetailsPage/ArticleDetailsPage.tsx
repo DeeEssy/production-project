@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import { Page } from '@/widgets/Page';
 import { ArticleRecommendationsList } from '@/widgets/ArticleRecommendationsList';
 import { ArticleComments } from '@/widgets/ArticleComments';
+import { ArticleRating } from '@/features/ArticleRating';
 import { ArticleDetails } from '@/entities/Article';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { DynamicModuleLoader, ReducerList } from '@/shared/lib';
@@ -33,6 +34,7 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
           <VStack max gap="16">
             <ArticleDetailsPageHeader />
             <ArticleDetails id={Number(id)} />
+            <ArticleRating id={Number(id)} />
             <ArticleRecommendationsList />
             <ArticleComments id={Number(id)} />
           </VStack>

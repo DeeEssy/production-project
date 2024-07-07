@@ -1,5 +1,7 @@
 {
     "error_the_article_not_found": "Стаття не знайдена",
     "back_to_articles": "Назад",
-    "edit": "Редагувати"
+    "edit": "Редагувати",
+    "rate_article": "Оцiнiть статтю",
+    "rate_article_text": "Залиште ваш вiдгук, це допоможе нам покращити якiсть"
 }
