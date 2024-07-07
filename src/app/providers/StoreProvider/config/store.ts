@@ -1,11 +1,11 @@
 import {
   AnyAction, CombinedState, Reducer, ReducersMapObject, configureStore,
 } from '@reduxjs/toolkit';
-import { counterReducer } from 'entities/Counter';
-import { userReducer } from 'entities/User';
-import { $api } from 'shared/api/api';
-import { ScrollSaverReducer } from 'features/ScrollSaver';
-import { rtkApi } from 'shared/api/rtkApi';
+import { counterReducer } from '@/entities/Counter';
+import { userReducer } from '@/entities/User';
+import { $api } from '@/shared/api/api';
+import { ScrollSaverReducer } from '@/features/ScrollSaver';
+import { rtkApi } from '@/shared/api/rtkApi';
 import { StateSchema } from './StateSchema';
 import { createReducerManager } from './reducerManager';
 

@@ -1,26 +1,28 @@
-import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { memo, useCallback } from 'react';
+import { useSelector } from 'react-redux';
 import {
   ArticleSortField, ArticleView, ArticleViewSelector, ArticleSortSelector,
   ArticleTypeTabs,
   getArticlesView,
   getArticlesSort,
+
   getArticlesOrder,
   getArticlesSearch,
   getArticlesType,
   fetchArticles,
   articlesActions,
   ArticleType,
-} from 'entities/Article';
-import { useSelector } from 'react-redux';
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { Card } from 'shared/ui/Card/Card';
-import { Input } from 'shared/ui/Input/Input';
-import { SortOrder } from 'shared/types';
-import { useDebounce } from 'shared/lib/hooks/useDebounce/useDebounce';
-import { Button } from 'shared/ui/Button/Button';
-import ClearIcon from 'shared/assets/icons/close.svg';
+} from '@/entities/Article';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
+import { Card } from '@/shared/ui/Card/Card';
+import { Input } from '@/shared/ui/Input/Input';
+import { SortOrder } from '@/shared/types';
+import { useDebounce } from '@/shared/lib/hooks/useDebounce/useDebounce';
+import { Button } from '@/shared/ui/Button/Button';
+import ClearIcon from '@/shared/assets/icons/close.svg';
+
 import cls from './ArticlesPageFilters.module.scss';
 
 interface ArticlesPageFiltersProps {

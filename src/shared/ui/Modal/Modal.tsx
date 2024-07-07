@@ -1,8 +1,8 @@
 import { FC, ReactNode } from 'react';
 
-import { useTheme } from 'app/providers/ThemeProvider';
-import { classNames } from 'shared/lib';
-import { useModal } from 'shared/lib/hooks/useModal/useModal';
+import { useTheme } from '@/app/providers/ThemeProvider';
+import { classNames } from '@/shared/lib';
+import { useModal } from '@/shared/lib/hooks/useModal/useModal';
 
 import { Portal } from '../Portal/Portal';
 import { Overlay } from '../Overlay/Overlay';

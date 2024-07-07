@@ -1,4 +1,4 @@
-import { StateSchema } from 'app/providers/StoreProvider';
+import { StateSchema } from '@/app/providers/StoreProvider';
 
 import { getUserRoles } from './getUserRoles';
 import { UserRole } from '../../types/enums/user';

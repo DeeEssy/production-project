@@ -1,10 +1,10 @@
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { ArticleList } from 'entities/Article';
-import { classNames } from 'shared/lib/classNames/classNames';
-import { Text, TextSize } from 'shared/ui/Text/Text';
-import { VStack } from 'shared/ui/Stack';
+import { ArticleList } from '@/entities/Article';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { Text, TextSize } from '@/shared/ui/Text/Text';
+import { VStack } from '@/shared/ui/Stack';
 
 import { useArticleRecommendationsList } from '../../model/api/articleRecommendationsApi';
 
@@ -30,7 +30,6 @@ export const ArticleRecommendationsList = memo((props: ArticleRecommendationsLis
       <ArticleList
         articles={articles}
         target="_blank"
-        virtualized={false}
       />
     </VStack>
   );

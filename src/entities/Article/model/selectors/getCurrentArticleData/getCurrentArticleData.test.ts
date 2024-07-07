@@ -1,4 +1,4 @@
-import { StateSchema } from 'app/providers/StoreProvider';
+import { StateSchema } from '@/app/providers/StoreProvider';
 import { getCurrentArticleData } from './getCurrentArticleData';
 import { ArticleBlockType, ArticleType } from '../../types/enums/article';
 

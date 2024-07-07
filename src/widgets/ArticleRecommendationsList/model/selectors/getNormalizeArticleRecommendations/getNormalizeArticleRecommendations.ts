@@ -1,4 +1,4 @@
-import { StateSchema } from 'app/providers/StoreProvider';
+import { StateSchema } from '@/app/providers/StoreProvider';
 import { recommendationsAdapter } from '../../slices/articleRecommendationsSlice';
 
 export const getNormalizeArticleRecommendations = recommendationsAdapter

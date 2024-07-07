@@ -1,4 +1,4 @@
-import { StateSchema } from 'app/providers/StoreProvider';
+import { StateSchema } from '@/app/providers/StoreProvider';
 import { commentsAdapter } from '../../slices/articleCommentsSlice';
 
 export const getNormalizeArticleComments = commentsAdapter

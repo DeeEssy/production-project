@@ -1,6 +1,6 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
-import { UserRole } from 'entities/User';
+import { UserRole } from '@/entities/User';
 
 import { ArticleList } from './ArticleList';
 import { Article } from '../../model/types/interfaces/articles';

@@ -1,14 +1,14 @@
 import { Suspense, memo } from 'react';
 import { useParams } from 'react-router-dom';
 
-import { Page } from 'widgets/Page';
-import { ArticleRecommendationsList } from 'widgets/ArticleRecommendationsList';
-import { ArticleComments } from 'widgets/ArticleComments';
-import { ArticleDetails } from 'entities/Article';
-import { classNames } from 'shared/lib/classNames/classNames';
-import { DynamicModuleLoader, ReducerList } from 'shared/lib';
-import { Loader } from 'shared/ui/Loader/Loader';
-import { VStack } from 'shared/ui/Stack';
+import { Page } from '@/widgets/Page';
+import { ArticleRecommendationsList } from '@/widgets/ArticleRecommendationsList';
+import { ArticleComments } from '@/widgets/ArticleComments';
+import { ArticleDetails } from '@/entities/Article';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { DynamicModuleLoader, ReducerList } from '@/shared/lib';
+import { Loader } from '@/shared/ui/Loader/Loader';
+import { VStack } from '@/shared/ui/Stack';
 
 import { articleDetailsPageReducer } from '../../model/slices';
 import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader';

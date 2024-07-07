@@ -1,5 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { ThunkConfig } from 'app/providers/StoreProvider';
+import { ThunkConfig } from '@/app/providers/StoreProvider';
 import { fetchArticles } from '../fetchArticles/fetchArticles';
 import { articlesActions } from '../../slices/articles';
 import { getArticlesHasMore } from '../../selectors/getArticlesHasMore/getArticlesHasMore';

@@ -1,4 +1,4 @@
-import { UserRole } from 'entities/User';
+import { UserRole } from '@/entities/User';
 import { ArticleDetailsSchema } from '../types/interfaces/articleDetailsSchema';
 import { currentArticleReducer } from './currentArticleSlice';
 import { Article } from '../types/interfaces/articles';

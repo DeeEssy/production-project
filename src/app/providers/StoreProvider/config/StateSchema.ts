@@ -2,15 +2,15 @@ import {
   AnyAction, CombinedState, EnhancedStore, Reducer, ReducersMapObject,
 } from '@reduxjs/toolkit';
 import { AxiosInstance } from 'axios';
-import { ArticleDetailsSchema, ArticlesSchema } from 'entities/Article';
-import { CounterSchema } from 'entities/Counter';
-import { UserSchema } from 'entities/User';
-import { AddCommentFormSchema } from 'features/AddCommentForm';
-import { LoginSchema } from 'features/AuthByUsername';
-import { ProfileSchema } from 'features/EditableProfileCard';
-import { ScrollSaverSchema } from 'features/ScrollSaver';
-import { ArticleDetailsPageSchema } from 'pages/ArticleDetailsPage';
-import { rtkApi } from 'shared/api/rtkApi';
+import { ArticleDetailsSchema, ArticlesSchema } from '@/entities/Article';
+import { CounterSchema } from '@/entities/Counter';
+import { UserSchema } from '@/entities/User';
+import { AddCommentFormSchema } from '@/features/AddCommentForm';
+import { LoginSchema } from '@/features/AuthByUsername';
+import { ProfileSchema } from '@/features/EditableProfileCard';
+import { ScrollSaverSchema } from '@/features/ScrollSaver';
+import { ArticleDetailsPageSchema } from '@/pages/ArticleDetailsPage';
+import { rtkApi } from '@/shared/api/rtkApi';
 
 export interface StateSchema {
     counter: CounterSchema;

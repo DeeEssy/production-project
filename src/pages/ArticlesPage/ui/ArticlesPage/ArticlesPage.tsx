@@ -1,15 +1,17 @@
-import { classNames } from 'shared/lib/classNames/classNames';
 import { Suspense, memo, useCallback } from 'react';
-import { DynamicModuleLoader, ReducerList } from 'shared/lib';
-import { Loader } from 'shared/ui/Loader/Loader';
-import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useSelector } from 'react-redux';
-import { Page } from 'widgets/Page';
 import { useSearchParams } from 'react-router-dom';
-import { InfiniteArticlesList } from 'widgets/InfiniteArticlesList';
-import { articlesReducer, fetchNextArticlesPage, getArticlesIsLoading } from 'entities/Article';
-import { ArticlesPageFilters } from 'widgets/ArticlesPageFilters';
+
+import { Page } from '@/widgets/Page';
+import { ArticlesPageFilters } from '@/widgets/ArticlesPageFilters';
+import { InfiniteArticlesList } from '@/widgets/InfiniteArticlesList';
+import { articlesReducer, fetchNextArticlesPage, getArticlesIsLoading } from '@/entities/Article';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { DynamicModuleLoader, ReducerList } from '@/shared/lib';
+import { Loader } from '@/shared/ui/Loader/Loader';
+import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
+
 import cls from './ArticlesPage.module.scss';
 import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage';
 
