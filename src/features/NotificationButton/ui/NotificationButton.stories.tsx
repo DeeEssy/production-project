@@ -2,6 +2,7 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { NotificationButton } from './NotificationButton';
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 
 export default {
   title: 'features/NotificationButton',
@@ -14,4 +15,4 @@ export default {
 const Template: ComponentStory<typeof NotificationButton> = (args) => <NotificationButton {...args} />;
 
 export const Light = Template.bind({});
-Light.args = {};
+Light.decorators = [StoreDecorator({})];
