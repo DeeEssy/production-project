@@ -44,7 +44,7 @@ module.exports = {
     'no-param-reassign': 0,
     'no-undef': 'off',
     'react/no-array-index-key': 0,
-    'kenshimoral-fsd-path-checker/path-checker': 'error',
+    'kenshimoral-fsd-path-checker/path-checker': ['error', { alias: '@' }],
   },
   globals: {
     __IS_DEV__: true,
