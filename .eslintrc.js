@@ -45,6 +45,7 @@ module.exports = {
     'no-undef': 'off',
     'react/no-array-index-key': 0,
     'kenshimoral-fsd-path-checker/path-checker': ['error', { alias: '@' }],
+    'kenshimoral-fsd-path-checker/public-api-imports': ['error', { alias: '@' }],
   },
   globals: {
     __IS_DEV__: true,
