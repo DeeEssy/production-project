@@ -10,10 +10,10 @@ import { classNames } from '@/shared/lib';
 import { Button, ThemeButton } from '@/shared/ui/Button/Button';
 import { Text, TextTheme } from '@/shared/ui/Text/Text';
 import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink/AppLink';
-import { RoutePath } from '@/shared/config/routeConfig/routeConfig';
 import { HStack } from '@/shared/ui/Stack';
 
 import cls from './Navbar.module.scss';
+import { RoutePath } from '@/shared/const/router';
 
 interface NavbarProps {
   className?: string;
