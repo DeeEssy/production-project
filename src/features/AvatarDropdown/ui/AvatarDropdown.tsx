@@ -9,7 +9,7 @@ import {
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Avatar } from '@/shared/ui/Avatar';
 import { Dropdown, DropdownItem } from '@/shared/ui/Dropdown';
-import { RoutePath } from '@/shared/const/router';
+import { getRouteAdmin, getRouteProfile } from '@/shared/const/router';
 
 interface AvatarDropdownProps {
     className?: string;
@@ -33,7 +33,7 @@ export const AvatarDropdown = memo(({ className }: AvatarDropdownProps) => {
     const items = [
       {
         content: t('profile'),
-        href: `${RoutePath.profile}/${authData.id}`,
+        href: getRouteProfile(authData.id.toString()),
       },
       {
         content: t('logout'),
@@ -44,7 +44,7 @@ export const AvatarDropdown = memo(({ className }: AvatarDropdownProps) => {
     if (isUserAdmin) {
       items.unshift({
         content: t('admin'),
-        href: RoutePath.admin_panel,
+        href: getRouteAdmin(),
       });
     }
 
