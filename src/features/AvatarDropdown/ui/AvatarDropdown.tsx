@@ -7,8 +7,8 @@ import {
   getUserAuthData, userActions,
 } from '@/entities/User';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Avatar } from '@/shared/ui/Avatar/Avatar';
-import { Dropdown, DropdownItem } from '@/shared/ui/Dropdown/Dropdown';
+import { Avatar } from '@/shared/ui/Avatar';
+import { Dropdown, DropdownItem } from '@/shared/ui/Dropdown';
 import { RoutePath } from '@/shared/const/router';
 
 interface AvatarDropdownProps {

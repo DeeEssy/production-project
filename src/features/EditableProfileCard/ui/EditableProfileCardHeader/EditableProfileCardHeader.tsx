@@ -4,8 +4,8 @@ import { useSelector } from 'react-redux';
 
 import { getUserAuthData } from '@/entities/User';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Text } from '@/shared/ui/Text/Text';
-import { Button, ThemeButton } from '@/shared/ui/Button/Button';
+import { Text } from '@/shared/ui/Text';
+import { Button, ThemeButton } from '@/shared/ui/Button';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { HStack } from '@/shared/ui/Stack';
 

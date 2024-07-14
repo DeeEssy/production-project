@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 import {
   ArticleList, getArticlesError, getArticlesIsLoading, getArticlesView, getNormalizeArticles,
 } from '@/entities/Article';
-import { Text } from '@/shared/ui/Text/Text';
+import { Text } from '@/shared/ui/Text';
 
 interface ArticleInfiniteListProps {
     className?: string;

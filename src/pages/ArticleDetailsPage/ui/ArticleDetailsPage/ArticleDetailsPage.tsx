@@ -8,7 +8,7 @@ import { ArticleRating } from '@/features/ArticleRating';
 import { ArticleDetails } from '@/entities/Article';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { DynamicModuleLoader, ReducerList } from '@/shared/lib';
-import { Loader } from '@/shared/ui/Loader/Loader';
+import { Loader } from '@/shared/ui/Loader';
 import { VStack } from '@/shared/ui/Stack';
 
 import { articleDetailsPageReducer } from '../../model/slices';

@@ -7,9 +7,9 @@ import { AvatarDropdown } from '@/features/AvatarDropdown';
 import { NotificationButton } from '@/features/NotificationButton';
 import { getUserAuthData } from '@/entities/User';
 import { classNames } from '@/shared/lib';
-import { Button, ThemeButton } from '@/shared/ui/Button/Button';
-import { Text, TextTheme } from '@/shared/ui/Text/Text';
-import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink/AppLink';
+import { Button, ThemeButton } from '@/shared/ui/Button';
+import { Text, TextTheme } from '@/shared/ui/Text';
+import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink';
 import { HStack } from '@/shared/ui/Stack';
 
 import cls from './Navbar.module.scss';
