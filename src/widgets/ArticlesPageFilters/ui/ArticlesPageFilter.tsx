@@ -1,12 +1,14 @@
 import { useTranslation } from 'react-i18next';
 import { memo, useCallback } from 'react';
 import { useSelector } from 'react-redux';
+
+import { ArticleSortSelector } from '@/features/ArticleSortSelector';
+import { ArticleViewSelector } from '@/features/ArticleViewSelector';
+import { ArticleTypeTabs } from '@/features/ArticleTypeTabs';
 import {
-  ArticleSortField, ArticleView, ArticleViewSelector, ArticleSortSelector,
-  ArticleTypeTabs,
+  ArticleSortField, ArticleView,
   getArticlesView,
   getArticlesSort,
-
   getArticlesOrder,
   getArticlesSearch,
   getArticlesType,
