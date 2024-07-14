@@ -30,6 +30,6 @@ describe('getIsUserManager', () => {
 
   test('should work with empty state', () => {
     const state: DeepPartial<StateSchema> = {};
-    expect(getIsUserManager(state as StateSchema)).toEqual(undefined);
+    expect(getIsUserManager(state as StateSchema)).toEqual(false);
   });
 });

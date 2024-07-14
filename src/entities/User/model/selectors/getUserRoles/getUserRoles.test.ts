@@ -21,6 +21,6 @@ describe('getUserRoles', () => {
 
   test('should work with empty state', () => {
     const state: DeepPartial<StateSchema> = {};
-    expect(getUserRoles(state as StateSchema)).toEqual(undefined);
+    expect(getUserRoles(state as StateSchema)).toEqual([]);
   });
 });

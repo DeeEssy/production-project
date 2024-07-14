@@ -1,5 +1,7 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
+
 import { EditableProfileCard } from './EditableProfileCard';
 
 export default {
@@ -16,3 +18,4 @@ export const Light = Template.bind({});
 Light.args = {
 
 };
+Light.decorators = [StoreDecorator({})];

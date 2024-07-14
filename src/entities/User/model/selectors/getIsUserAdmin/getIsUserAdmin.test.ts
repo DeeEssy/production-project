@@ -30,6 +30,6 @@ describe('getIsUserAdmin', () => {
 
   test('should work with empty state', () => {
     const state: DeepPartial<StateSchema> = {};
-    expect(getIsUserAdmin(state as StateSchema)).toEqual(undefined);
+    expect(getIsUserAdmin(state as StateSchema)).toEqual(false);
   });
 });
