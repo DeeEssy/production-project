@@ -1,5 +1,3 @@
-import { Locale } from '../types/config';
-
 export function buildBabelLoader(isDev: boolean) {
   return {
     test: /\.(js|jsx|tsx)$/,
@@ -9,10 +7,6 @@ export function buildBabelLoader(isDev: boolean) {
       options: {
         presets: ['@babel/preset-env'],
         plugins: [
-          [
-            'i18next-extract',
-            { locales: [Locale.EN, Locale.UA], keyAsDefaultValue: true },
-          ],
           isDev && require.resolve('react-refresh/babel'),
         ].filter(Boolean),
       },

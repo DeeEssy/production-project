@@ -24,7 +24,7 @@ export function buildWebpackConfig(
     },
     plugins: buildPlugins(options),
     resolve: buildResolves(options),
-    devtool: isDev ? 'inline-source-map' : false,
+    devtool: isDev ? 'eval-cheap-module-source-map' : false,
     devServer: isDev ? buildLDevServer(options) : undefined,
   };
 }
