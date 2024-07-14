@@ -1,8 +1,8 @@
 import { ButtonHTMLAttributes, ReactNode, memo } from 'react';
 
-import { Theme } from '@/app/providers/ThemeProvider';
 import { classNames } from '@/shared/lib';
 import { Mods } from '@/shared/lib/classNames/classNames';
+import { Theme } from '@/shared/const/theme';
 
 import cls from './Button.module.scss';
 

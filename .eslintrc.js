@@ -46,6 +46,7 @@ module.exports = {
     'react/no-array-index-key': 0,
     'kenshimoral-fsd-path-checker/path-checker': ['error', { alias: '@' }],
     'kenshimoral-fsd-path-checker/public-api-imports': ['error', { alias: '@' }],
+    'kenshimoral-fsd-path-checker/layer-imports': ['error', { alias: '@', ignoreImportPatterns: ['**/StoreProvider'] }],
   },
   globals: {
     __IS_DEV__: true,
