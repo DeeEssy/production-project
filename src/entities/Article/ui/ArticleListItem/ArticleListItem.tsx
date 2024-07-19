@@ -8,6 +8,9 @@ import EyeIcon from '@/shared/assets/icons/eye-20-20.svg';
 import { Card } from '@/shared/ui/Card';
 import { Avatar } from '@/shared/ui/Avatar';
 import { Button, ThemeButton } from '@/shared/ui/Button';
+import { getRouteArticleDetails } from '@/shared/const/router';
+import { AppImage } from '@/shared/ui/AppImage';
+import { Skeleton } from '@/shared/ui/Skeleton';
 import { AppLink } from '@/shared/ui/AppLink';
 
 import { Article } from '../../model/types/interfaces/articles';
@@ -15,7 +18,6 @@ import { ArticleBlockType, ArticleView } from '../../model/types/enums/article';
 import { ArticleTextBlock } from '../../model/types/interfaces/articleBlocks';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 import cls from './ArticleListItem.module.scss';
-import { getRouteArticleDetails } from '@/shared/const/router';
 
 interface ArticleListItemProps {
     className?: string;
@@ -52,7 +54,7 @@ export const ArticleListItem = memo(({
           </div>
           <Text title={article.title} className={cls.title} />
           {types}
-          <img src={article.img} className={cls.img} alt={article.title} />
+          <AppImage fallback={<Skeleton width="100%" height={250} />} src={article.img} className={cls.img} alt={article.title} />
           {textBlock && (
           <ArticleTextBlockComponent block={textBlock} className={cls.textBlock} />
           )}
@@ -77,7 +79,7 @@ export const ArticleListItem = memo(({
     >
       <Card className={cls.card}>
         <div className={cls.imageWrapper}>
-          <img alt={article.title} src={article.img} className={cls.img} />
+          <AppImage fallback={<Skeleton width={200} height={200} />} alt={article.title} src={article.img} className={cls.img} />
           <Text text={article.createdAt} className={cls.date} />
         </div>
         <div className={cls.infoWrapper}>
