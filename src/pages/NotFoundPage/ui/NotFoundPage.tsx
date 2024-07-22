@@ -9,7 +9,7 @@ import cls from './NotFoundPage.module.scss';
 const NotFoundPage = memo(() => {
   const { t } = useTranslation();
 
-  return <Page className={classNames(cls.NotFoundPage)}>{t('not_found_page')}</Page>;
+  return <Page data-testid="notFoundPage" className={classNames(cls.NotFoundPage)}>{t('not_found_page')}</Page>;
 });
 
 export default NotFoundPage;
