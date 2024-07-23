@@ -2,6 +2,8 @@ import {
   ImgHTMLAttributes, memo, ReactElement, useLayoutEffect, useState,
 } from 'react';
 
+import './AppImage.module.scss';
+
 interface AppImageProps extends ImgHTMLAttributes<HTMLImageElement>{
     className?: string;
     fallback?: ReactElement;

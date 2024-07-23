@@ -134,7 +134,7 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
 
   return (
     <DynamicModuleLoader reducers={initialReducers}>
-      <VStack gap="16" className={classNames(cls.articleDetails, {}, [className])}>
+      <VStack gap="16" className={classNames(cls.articleDetails, {}, [className])} data-testid="article-details-info">
         {content}
       </VStack>
     </DynamicModuleLoader>
