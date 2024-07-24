@@ -6,6 +6,7 @@ import { ThemeSwitcher } from '@/features/ThemeSwitcher';
 import { classNames } from '@/shared/lib';
 import { Button, ButtonSize, ThemeButton } from '@/shared/ui/Button';
 import { HStack, VStack } from '@/shared/ui/Stack';
+import { AppLogo } from '@/shared/ui/AppLogo';
 
 import { SidebarItem } from '../SidebarItem/SidebarItem';
 import { getSidebarItems } from '../../model/selectors/getSidebarItems/getSidebarItems';
@@ -30,6 +31,33 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
   )), [sidebarItemsList, isSidebarCollapsed]);
 
   return (
+  // <div
+  //   data-testid="sidebar"
+  //   className={classNames(
+  //     cls.sidebar,
+  //     { [cls.collapsed]: isSidebarCollapsed },
+  //     [className],
+  //   )}
+  // >
+  //   <VStack role="navigation" gap="8" className={cls.items}>
+  //     {itemsList}
+  //   </VStack>
+  //   <HStack justify="center" max className={cls.switchers}>
+  //     <ThemeSwitcher className={classNames(cls.themeSwitcher)} />
+  //     <LanguageSwitcher short={isSidebarCollapsed} className={classNames(cls.languageSwitcher)} />
+  //   </HStack>
+  //   <Button
+  //     className={cls.collapseBtn}
+  //     data-testid="sidebar-toggle"
+  //     onClick={onToggle}
+  //     theme={ThemeButton.BACKGROUND_INVERTED}
+  //     square
+  //     size={ButtonSize.L}
+  //   >
+  //     {isSidebarCollapsed ? '>' : '<'}
+  //   </Button>
+  // </div>
+
     <div
       data-testid="sidebar"
       className={classNames(
@@ -38,23 +66,8 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
         [className],
       )}
     >
-      <VStack role="navigation" gap="8" className={cls.items}>
-        {itemsList}
-      </VStack>
-      <HStack justify="center" max className={cls.switchers}>
-        <ThemeSwitcher className={classNames(cls.themeSwitcher)} />
-        <LanguageSwitcher short={isSidebarCollapsed} className={classNames(cls.languageSwitcher)} />
-      </HStack>
-      <Button
-        className={cls.collapseBtn}
-        data-testid="sidebar-toggle"
-        onClick={onToggle}
-        theme={ThemeButton.BACKGROUND_INVERTED}
-        square
-        size={ButtonSize.L}
-      >
-        {isSidebarCollapsed ? '>' : '<'}
-      </Button>
+      <AppLogo className={cls.appLogo} />
+      <ThemeSwitcher className={classNames(cls.themeSwitcher)} />
     </div>
   );
 });

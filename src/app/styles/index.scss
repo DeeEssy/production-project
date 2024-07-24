@@ -15,10 +15,10 @@ body {
 }
 
 .app {
-  background-color: var(--bg-color);
+  background: var(--bg);
   min-height: 100vh;
   font: var(--font-m);
-  color: var(--primary-color);
+  color: var(--text);
 }
 
 .main {

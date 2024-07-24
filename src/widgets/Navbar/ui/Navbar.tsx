@@ -33,19 +33,11 @@ export const Navbar = memo(({ className }: NavbarProps) => {
 
   if (authData) {
     return (
-      <header className={classNames(cls.navbar, {}, [className])}>
-        <Text
-          className={cls.appName}
-          title={t('application_name')}
-          theme={TextTheme.INVERTED}
-        />
-        <AppLink
-          to={getRouteArticleCreate()}
-          theme={AppLinkTheme.SECONDARY}
-          className={cls.createBtn}
-        >
-          {t('create_article')}
-        </AppLink>
+      <header
+        className={classNames(cls.navbar, {}, [
+          className,
+        ])}
+      >
         <HStack gap="16" className={cls.actions}>
           <NotificationButton />
           <AvatarDropdown />

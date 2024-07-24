@@ -8,6 +8,7 @@ import { getUserAuthInited, initAuthData } from '@/entities/User';
 import { classNames } from '@/shared/lib';
 import { useTheme } from '@/shared/lib/hooks/useTheme/useTheme';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
+import { MainLayout } from '@/shared/layouts/MainLayout';
 
 import { AppRouter } from './providers/router';
 
@@ -30,12 +31,12 @@ const App = () => {
 
   return (
     <div className={classNames('app', {}, [theme])}>
-      <Suspense fallback={<PageLoader />}>
-        <Navbar />
-        <div className={classNames('main')}>
-          <Sidebar />
-          {inited && <AppRouter />}
-        </div>
+      <Suspense fallback="">
+        <MainLayout
+          header={<Navbar />}
+          content={<AppRouter />}
+          sidebar={<Sidebar />}
+        />
       </Suspense>
     </div>
   );
