@@ -6,3 +6,4 @@ export { getUserAuthInited } from './model/selectors/getUserAuthInited/getUserAu
 export { getIsUserAdmin } from './model/selectors/getIsUserAdmin/getIsUserAdmin';
 export { getIsUserManager } from './model/selectors/getIsUserManager/getIsUserManager';
 export { getUserRoles } from './model/selectors/getUserRoles/getUserRoles';
+export { initAuthData } from './model/services/initAuthData';
