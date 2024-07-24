@@ -1,9 +1,19 @@
 .icon {
-  fill: var(--primary-color);
-  color: var(--primary-color);
+  color: var(--icon);
 }
 
-.inverted {
-  fill: var(--inverted-primary-color);
-  color: var(--inverted-primary-color);
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+
+.button:hover .icon {
+  color: var(--accent);
 }

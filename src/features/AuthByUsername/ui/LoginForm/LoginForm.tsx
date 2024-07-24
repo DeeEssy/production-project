@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 
 import { classNames, DynamicModuleLoader, ReducerList } from '@/shared/lib';
-import { Button, ThemeButton } from '@/shared/ui/Button';
+import { Button } from '@/shared/ui/Button';
 import { Input } from '@/shared/ui/Input';
 import { Text, TextTheme } from '@/shared/ui/Text';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
@@ -71,7 +71,7 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
         />
         <Button
           onClick={onLoginSubmit}
-          theme={ThemeButton.OUTLINE}
+          variant="outline"
           disabled={isLoading}
           className={classNames(cls.loginBtn, {})}
         >

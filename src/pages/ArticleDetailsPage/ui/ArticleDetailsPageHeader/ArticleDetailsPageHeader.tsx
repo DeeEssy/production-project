@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 
 import { getCurrentArticleData } from '@/entities/Article';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Button, ThemeButton } from '@/shared/ui/Button';
+import { Button } from '@/shared/ui/Button';
 import { HStack } from '@/shared/ui/Stack';
 
 import { getArticleCanEdit } from '../../model/selectors/getArticleCanEdit/getArticleCanEdit';
@@ -34,12 +34,12 @@ export const ArticleDetailsPageHeader = memo((props: ArticleDetailsPageHeaderPro
 
   return (
     <HStack max justify="between" className={classNames('', {}, [className])}>
-      <Button theme={ThemeButton.OUTLINE} onClick={onBackToList}>
+      <Button variant="outline" onClick={onBackToList}>
         {t('back_to_articles')}
       </Button>
       {canEdit && (
         <Button
-          theme={ThemeButton.OUTLINE}
+          variant="outline"
           onClick={onEditArticle}
         >
           {t('edit')}

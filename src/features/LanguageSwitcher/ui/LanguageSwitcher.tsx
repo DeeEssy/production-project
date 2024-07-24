@@ -1,11 +1,9 @@
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { Button, ThemeButton } from '@/shared/ui/Button';
+import { Button } from '@/shared/ui/Button';
 import { classNames } from '@/shared/lib';
 import { Locale } from '@/shared/config/i18n/locales';
-
-import cls from './LanguageSwitcher.module.scss';
 
 interface LanguageSwitcherProps {
   className?: string;
@@ -21,9 +19,9 @@ export const LanguageSwitcher = memo(({ className, short }: LanguageSwitcherProp
 
   return (
     <Button
-      className={classNames(cls.languageSwitcher, {}, [className])}
+      className={classNames('', {}, [className])}
       onClick={toggleLanguage}
-      theme={ThemeButton.CLEAR}
+      variant="clear"
     >
       {short ? i18n.language.toUpperCase() : t('language')}
     </Button>

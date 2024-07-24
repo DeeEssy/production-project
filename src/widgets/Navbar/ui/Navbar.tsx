@@ -7,13 +7,10 @@ import { AvatarDropdown } from '@/features/AvatarDropdown';
 import { NotificationButton } from '@/features/NotificationButton';
 import { getUserAuthData } from '@/entities/User';
 import { classNames } from '@/shared/lib';
-import { Button, ThemeButton } from '@/shared/ui/Button';
-import { Text, TextTheme } from '@/shared/ui/Text';
-import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink';
+import { Button } from '@/shared/ui/Button';
 import { HStack } from '@/shared/ui/Stack';
 
 import cls from './Navbar.module.scss';
-import { getRouteArticleCreate } from '@/shared/const/router';
 
 interface NavbarProps {
   className?: string;
@@ -50,7 +47,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
     <header className={classNames(cls.navbar, {}, [className])}>
       <Button
         onClick={onShowAuthModal}
-        theme={ThemeButton.CLEAR_INVERTED}
+        variant="clear"
         className={classNames(cls.links)}
       >
         {t('enter')}

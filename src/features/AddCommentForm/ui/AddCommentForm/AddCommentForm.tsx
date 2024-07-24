@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Input } from '@/shared/ui/Input';
-import { Button, ThemeButton } from '@/shared/ui/Button';
+import { Button } from '@/shared/ui/Button';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { DynamicModuleLoader, ReducerList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { HStack } from '@/shared/ui/Stack';
@@ -48,7 +48,7 @@ const AddCommentForm = memo((props: AddCommentFormProps) => {
           data-testid="add-comment-form-input"
         />
         <Button
-          theme={ThemeButton.OUTLINE}
+          variant="outline"
           onClick={onSendHandler}
           data-testid="add-comment-form-send-button"
         >

@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 import { getUserAuthData } from '@/entities/User';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Text } from '@/shared/ui/Text';
-import { Button, ThemeButton } from '@/shared/ui/Button';
+import { Button } from '@/shared/ui/Button';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { HStack } from '@/shared/ui/Stack';
 
@@ -46,7 +46,7 @@ export const EditableProfileCardHeader = memo(({ className, id }: EditableProfil
         readonly
           ? (
             <Button
-              theme={ThemeButton.OUTLINE}
+              variant="outline"
               onClick={onEdit}
               data-testid="profile-card-edit-btn"
             >
@@ -56,7 +56,7 @@ export const EditableProfileCardHeader = memo(({ className, id }: EditableProfil
           : (
             <HStack gap="8">
               <Button
-                theme={ThemeButton.OUTLINE_RED}
+                variant="outline"
                 onClick={onCancelEdit}
                 disabled={isLoading}
                 data-testid="profile-card-undo-btn"
@@ -64,7 +64,7 @@ export const EditableProfileCardHeader = memo(({ className, id }: EditableProfil
                 {t('undo')}
               </Button>
               <Button
-                theme={ThemeButton.OUTLINE}
+                variant="outline"
                 onClick={onSave}
                 disabled={isLoading}
                 data-testid="profile-card-save-btn"
