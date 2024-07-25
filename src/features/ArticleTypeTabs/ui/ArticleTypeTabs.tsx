@@ -44,6 +44,7 @@ export const ArticleTypeTabs = memo((props: ArticleTypeTabsProps) => {
       value={value}
       onTabClick={onTabClick}
       className={classNames('', {}, [className])}
+      direction="column"
     />
   );
 });

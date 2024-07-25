@@ -16,11 +16,13 @@
   position: absolute;
   z-index: 10000;
   border-radius: 12px;
-  box-shadow: 4px 4px 8px var(--dark-bg);
+  border: 2px solid var(--light-bg);
 }
 
 .item {
   padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 12px;
 }
 
 .active {
@@ -32,21 +34,25 @@
 }
 
 .optionsBottomLeft {
-  top: 100%;
+  top: 120%;
   right: 0;
 }
 
 .optionsBottomRight {
-  top: 100%;
+  top: 120%;
   left: 0;
 }
 
 .optionsTopRight {
-  bottom: 100%;
+  bottom: 120%;
   left: 0;
 }
 
 .optionsTopLeft {
   right: 0;
-  bottom: 100%;
+  bottom: 120%;
+}
+
+.selected {
+  background: var(--light-bg);
 }

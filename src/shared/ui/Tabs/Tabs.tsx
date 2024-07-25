@@ -3,6 +3,7 @@ import { memo, ReactNode, useCallback } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 
 import { Card } from '../Card/Card';
+import { Flex, FlexDirection } from '../Stack/Flex/Flex';
 import cls from './Tabs.module.scss';
 
 export interface TabItem {
@@ -15,11 +16,12 @@ interface TabsProps {
     tabs: TabItem[];
     value: string;
     onTabClick: (tab: TabItem) => void;
+    direction?: FlexDirection;
 }
 
 export const Tabs = memo((props: TabsProps) => {
   const {
-    className, tabs, onTabClick, value,
+    className, tabs, onTabClick, value, direction = 'row',
   } = props;
 
   const clickHandle = useCallback((tab: TabItem) => () => {
@@ -27,17 +29,28 @@ export const Tabs = memo((props: TabsProps) => {
   }, [onTabClick]);
 
   return (
-    <div className={classNames(cls.tabs, {}, [className])}>
-      {tabs.map((tab) => (
-        <Card
-          variant={tab.value === value ? 'normal' : 'outlined'}
-          className={cls.tab}
-          key={tab.value}
-          onClick={clickHandle(tab)}
-        >
-          {tab.content}
-        </Card>
-      ))}
-    </div>
+    <Flex
+      direction={direction}
+      gap="8"
+      align="start"
+      className={classNames(cls.tabs, {}, [className])}
+    >
+      {tabs.map((tab) => {
+        const isSelected = tab.value === value;
+        return (
+          <Card
+            variant={isSelected ? 'light' : 'normal'}
+            className={classNames(cls.tab, {
+              [cls.selected]: isSelected,
+            })}
+            key={tab.value}
+            onClick={clickHandle(tab)}
+            border="m-round"
+          >
+            {tab.content}
+          </Card>
+        );
+      })}
+    </Flex>
   );
 });

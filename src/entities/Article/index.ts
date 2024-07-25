@@ -22,3 +22,4 @@ export { articlesActions, articlesReducer } from './model/slices/articles';
 export { getArticlesInited } from './model/selectors/getArticlesInited/getArticlesInited';
 export type { ArticlesSchema } from './model/types/interfaces/articles';
 export { fetchNextArticlesPage } from './model/services/fetchNextArticlesPage/fetchNextArticlesPage';
+export { useArticleFilters } from './lib/hooks/useArticleFilters';

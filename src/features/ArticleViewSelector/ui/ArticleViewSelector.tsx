@@ -2,10 +2,11 @@ import { memo } from 'react';
 
 import { ArticleView } from '@/entities/Article';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import ListIcon from '@/shared/assets/icons/list-24-24.svg';
-import TiledIcon from '@/shared/assets/icons/tiled-24-24.svg';
+import ListIcon from '@/shared/assets/icons/burger.svg';
+import TiledIcon from '@/shared/assets/icons/tile.svg';
 import { Icon } from '@/shared/ui/Icon';
-import { Button } from '@/shared/ui/Button';
+import { HStack } from '@/shared/ui/Stack';
+import { Card } from '@/shared/ui/Card';
 
 import cls from './ArticleViewSelector.module.scss';
 
@@ -34,19 +35,27 @@ export const ArticleViewSelector = memo((props: ArticleViewSelectorProps) => {
   };
 
   return (
-    <div className={classNames(cls.articleViewSelector, {}, [className])}>
-      {viewTypes.map((viewType) => (
-        <Button
-          key={viewType.view}
-          variant="clear"
-          onClick={onClick(viewType.view)}
-        >
+    <Card
+      className={classNames(
+        cls.articleViewSelector,
+        {},
+        [className],
+      )}
+      border="m-round"
+    >
+      <HStack gap="8">
+        {viewTypes.map((viewType) => (
           <Icon
+            clickable
+            key={viewType.view}
+            onClick={onClick(viewType.view)}
             Svg={viewType.icon}
-            className={classNames('', { [cls.notSelected]: viewType.view !== view })}
+            className={classNames('', {
+              [cls.notSelected]: viewType.view !== view,
+            })}
           />
-        </Button>
-      ))}
-    </div>
+        ))}
+      </HStack>
+    </Card>
   );
 });

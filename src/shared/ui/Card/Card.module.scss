@@ -1,6 +1,5 @@
 .card {
   padding: 24px;
-  border-radius: 12px;
 }
 
 .withoutPaddings {
@@ -37,4 +36,12 @@
 
 .gap_24 {
   padding: 24px;
+}
+
+.sm-round {
+  border-radius: 12px;
+}
+
+.m-round {
+  border-radius: 40px;
 }
