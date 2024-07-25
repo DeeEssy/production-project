@@ -46,7 +46,6 @@ export const EditableProfileCardHeader = memo(({ className, id }: EditableProfil
         readonly
           ? (
             <Button
-              variant="outline"
               onClick={onEdit}
               data-testid="profile-card-edit-btn"
             >
@@ -56,7 +55,6 @@ export const EditableProfileCardHeader = memo(({ className, id }: EditableProfil
           : (
             <HStack gap="8">
               <Button
-                variant="outline"
                 onClick={onCancelEdit}
                 disabled={isLoading}
                 data-testid="profile-card-undo-btn"
@@ -64,7 +62,6 @@ export const EditableProfileCardHeader = memo(({ className, id }: EditableProfil
                 {t('undo')}
               </Button>
               <Button
-                variant="outline"
                 onClick={onSave}
                 disabled={isLoading}
                 data-testid="profile-card-save-btn"

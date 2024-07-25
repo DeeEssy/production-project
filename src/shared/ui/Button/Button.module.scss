@@ -35,6 +35,11 @@
   outline: none;
 }
 
+.outline {
+  background-color: transparent;
+  border: 1px solid var(--accent);
+}
+
 .filled {
   background: var(--light-bg);
   border: none;
