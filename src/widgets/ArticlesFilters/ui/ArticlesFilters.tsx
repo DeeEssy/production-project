@@ -9,6 +9,8 @@ import { Card } from '@/shared/ui/Card';
 import { VStack } from '@/shared/ui/Stack';
 import { SortOrder } from '@/shared/types/sort';
 import { Input } from '@/shared/ui/Input';
+import SearchIcon from '@/shared/assets/icons/search.svg';
+import { Icon } from '@/shared/ui/Icon';
 
 import cls from './ArticlesFilters.module.scss';
 
@@ -48,6 +50,7 @@ export const ArticlesFilters = memo((props: ArticlesFiltersProps) => {
           onChange={onChangeSearch}
           value={search}
           placeholder={t('search')}
+          addonLeft={<Icon Svg={SearchIcon} />}
         />
         <ArticleTypeTabs
           value={type}

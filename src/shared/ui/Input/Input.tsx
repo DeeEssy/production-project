@@ -1,8 +1,10 @@
 import {
-  InputHTMLAttributes, memo, ChangeEvent, useState, useEffect, useRef,
+  InputHTMLAttributes, memo, useState, useEffect, useRef,
+  ReactNode,
 } from 'react';
 
 import { classNames } from '@/shared/lib';
+import { Mods } from '@/shared/lib/classNames/classNames';
 
 import cls from './Input.module.scss';
 
@@ -14,6 +16,8 @@ interface InputProps extends HTMLInputProps {
   onChange?: (value: string) => void;
   autofocus?: boolean;
   readonly?: boolean;
+  addonLeft?: ReactNode;
+  addonRight?: ReactNode;
 }
 
 export const Input = memo((props: InputProps) => {
@@ -24,14 +28,24 @@ export const Input = memo((props: InputProps) => {
     placeholder,
     autofocus,
     readonly,
+    addonLeft,
+    addonRight,
     ...otherProps
   } = props;
 
   const ref = useRef<HTMLInputElement>(null);
   const [isFocused, setIsFocused] = useState(false);
-  const [caretPosition, setCaretPosition] = useState(0);
 
-  const isCaretVisible = isFocused && !readonly;
+  useEffect(() => {
+    if (autofocus) {
+      setIsFocused(true);
+      ref.current?.focus();
+    }
+  }, [autofocus]);
+
+  const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+    onChange?.(e.target.value);
+  };
 
   const onBlur = () => {
     setIsFocused(false);
@@ -41,50 +55,29 @@ export const Input = memo((props: InputProps) => {
     setIsFocused(true);
   };
 
-  const onSelect = (e: any) => {
-    setCaretPosition(e?.target?.selectionStart || 0);
+  const mods: Mods = {
+    [cls.readonly]: readonly,
+    [cls.focused]: isFocused,
+    [cls.withAddonLeft]: Boolean(addonLeft),
+    [cls.withAddonRight]: Boolean(addonRight),
   };
 
-  useEffect(() => {
-    if (autofocus) {
-      setIsFocused(true);
-      if (ref.current) {
-        ref.current.focus();
-      }
-    }
-  }, [autofocus]);
-
-  const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
-    onChange?.(e.target.value);
-    setCaretPosition(e.target.value.length);
-  };
   return (
-    <div className={classNames(cls.inputWrapper, { [cls.readonly]: readonly }, [className])}>
-      {placeholder && (
-      <div className={cls.placeholder}>
-        {`${placeholder}>`}
-      </div>
-      )}
-      <div className={cls.caretWrapper}>
-        <input
-          ref={ref}
-          type={type}
-          value={value}
-          onChange={onChangeHandler}
-          className={cls.input}
-          onFocus={onFocus}
-          onBlur={onBlur}
-          onSelect={onSelect}
-          readOnly={readonly}
-          {...otherProps}
-        />
-        {isCaretVisible && (
-          <span
-            className={cls.caret}
-            style={{ left: `${caretPosition * 9}px` }}
-          />
-        )}
-      </div>
+    <div className={classNames(cls.inputWrapper, mods, [className])}>
+      <div className={cls.addonLeft}>{addonLeft}</div>
+      <input
+        ref={ref}
+        type={type}
+        value={value}
+        onChange={onChangeHandler}
+        className={cls.input}
+        onFocus={onFocus}
+        onBlur={onBlur}
+        readOnly={readonly}
+        placeholder={placeholder}
+        {...otherProps}
+      />
+      <div className={cls.addonRight}>{addonRight}</div>
     </div>
   );
 });
