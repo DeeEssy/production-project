@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 import { classNames, DynamicModuleLoader, ReducerList } from '@/shared/lib';
 import { Button } from '@/shared/ui/Button';
 import { Input } from '@/shared/ui/Input';
-import { Text, TextTheme } from '@/shared/ui/Text';
+import { Text } from '@/shared/ui/Text';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 
 import { getLoginError } from '../../model/selectors/getLoginError/getLoginError';
@@ -55,7 +55,7 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
         className={classNames(cls.loginForm, {}, [className])}
       >
         <Text title={t('login_form')} />
-        {error && <Text text={t('error.wrong_username_or_password')} theme={TextTheme.ERROR} />}
+        {error && <Text text={t('error.wrong_username_or_password')} variant="error" />}
         <Input
           value={username}
           onChange={onChangeUsername}

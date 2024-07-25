@@ -2,7 +2,7 @@ import { HTMLAttributeAnchorTarget, memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Text, TextSize } from '@/shared/ui/Text';
+import { Text } from '@/shared/ui/Text';
 
 import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
@@ -37,7 +37,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
   if (!isLoading && !articles.length) {
     return (
       <div className={classNames(cls.articleList, {}, [className, cls[view]])}>
-        <Text size={TextSize.L} title={t('no_articles')} />
+        <Text size="l" title={t('no_articles')} />
       </div>
     );
   }

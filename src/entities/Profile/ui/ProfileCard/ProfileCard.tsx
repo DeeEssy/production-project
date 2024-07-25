@@ -5,7 +5,7 @@ import { Currency, CurrencySelect } from '@/entities/Currency';
 import { Country, CountrySelect } from '@/entities/Country';
 import { classNames } from '@/shared/lib';
 import { Input } from '@/shared/ui/Input';
-import { Text, TextAlign, TextTheme } from '@/shared/ui/Text';
+import { Text } from '@/shared/ui/Text';
 import { Loader } from '@/shared/ui/Loader';
 import { Avatar } from '@/shared/ui/Avatar';
 import { HStack, VStack } from '@/shared/ui/Stack';
@@ -47,10 +47,10 @@ export const ProfileCard = memo(({
     return (
       <HStack justify="center" max className={classNames(cls.profileCard, {}, [className, cls.error])}>
         <Text
-          theme={TextTheme.ERROR}
+          variant="error"
           title={t('error_downloading_profile')}
           text={t('error_try_reload_page')}
-          align={TextAlign.CENTER}
+          align="center"
         />
       </HStack>
     );

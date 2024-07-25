@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 
 import { classNames, DynamicModuleLoader, ReducerList } from '@/shared/lib';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { TextAlign, Text, TextSize } from '@/shared/ui/Text';
+import { Text } from '@/shared/ui/Text';
 import { Skeleton } from '@/shared/ui/Skeleton';
 import { Avatar } from '@/shared/ui/Avatar';
 import EyeIcon from '@/shared/assets/icons/eye-20-20.svg';
@@ -98,7 +98,7 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
   } else if (error) {
     content = (
       <Text
-        align={TextAlign.CENTER}
+        align="center"
         title={t('error_the_article_not_found')}
       />
     );
@@ -116,7 +116,7 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
           <Text
             title={article?.title}
             text={article?.subtitle}
-            size={TextSize.L}
+            size="l"
           />
           <HStack gap="8" max>
             <Icon Svg={EyeIcon} />

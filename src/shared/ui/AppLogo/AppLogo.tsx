@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 
 import { classNames } from '@/shared/lib';
 
-import { Text, TextSize } from '../Text';
+import { Text } from '../Text';
 
 interface AppLogoProps {
   className?: string;
@@ -20,7 +20,7 @@ export const AppLogo = memo((props: AppLogoProps) => {
     <Text
       className={classNames('', {}, [className])}
       title={t('application_name')}
-      size={TextSize.S}
+      size="s"
     />
   );
 });

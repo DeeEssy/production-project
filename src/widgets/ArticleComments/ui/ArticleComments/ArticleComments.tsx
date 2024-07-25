@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 import { AddCommentForm } from '@/features/AddCommentForm';
 import { CommentList } from '@/entities/Comment';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Text, TextSize } from '@/shared/ui/Text';
+import { Text } from '@/shared/ui/Text';
 import { VStack } from '@/shared/ui/Stack';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
@@ -44,7 +44,7 @@ export const ArticleComments = memo(({
     <VStack max gap="16" className={classNames(cls.articleComments, {}, [className])}>
       {!isLoading && (
       <>
-        <Text size={TextSize.L} className={classNames(cls.title)} title={t('comments')} />
+        <Text size="l" className={classNames(cls.title)} title={t('comments')} />
         <Suspense fallback={<Loader />}>
           <AddCommentForm onSendComment={onSendComment} />
         </Suspense>

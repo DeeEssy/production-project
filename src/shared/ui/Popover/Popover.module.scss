@@ -12,15 +12,17 @@
 }
 
 .panel {
-  background: var(--card-bg);
+  background: var(--dark-bg);
   position: absolute;
   z-index: 10000;
-  border-radius: 8px;
   padding: 15px;
+  border-radius: 8px;
+  border: 1px solid var(--accent);
+  overflow: hidden;
 }
 
 .active {
-  background: var(--inverted-primary-color);
+  background: var(--light-bg);
 }
 
 .optionsBottomLeft {

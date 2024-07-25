@@ -1,9 +1,9 @@
 .title {
-  color: var(--primary-color);
+  color: var(--text);
 }
 
 .text {
-  color: var(--secondary-color);
+  color: var(--text);
 }
 
 .error {
@@ -16,13 +16,13 @@
   }
 }
 
-.inverted {
+.accent {
   .title {
-    color: var(--inverted-primary-color);
+    color: var(--accent);
   }
 
   .text {
-    color: var(--inverted-secondary-color);
+    color: var(--accent);
   }
 }
 
