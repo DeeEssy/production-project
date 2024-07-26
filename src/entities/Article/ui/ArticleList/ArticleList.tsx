@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Text } from '@/shared/ui/Text';
+import { HStack } from '@/shared/ui/Stack';
 
 import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
@@ -43,8 +44,10 @@ export const ArticleList = memo((props: ArticleListProps) => {
   }
 
   return (
-    <div
-      className={classNames(cls.articleList, {}, [className, cls[view]])}
+    <HStack
+      wrap="wrap"
+      gap="16"
+      className={classNames(cls.articleList, {}, [])}
       data-testid="article-list"
     >
       {articles.map((item) => (
@@ -57,6 +60,6 @@ export const ArticleList = memo((props: ArticleListProps) => {
         />
       ))}
       {isLoading && getSkeletons(view)}
-    </div>
+    </HStack>
   );
 });
