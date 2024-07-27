@@ -19,7 +19,8 @@ const App = () => {
 
   useEffect(() => {
     dispatch(initAuthData());
-  }, [dispatch]);
+    document.body.className = theme;
+  }, [dispatch, theme]);
 
   if (!inited) {
     return (
@@ -30,7 +31,7 @@ const App = () => {
   }
 
   return (
-    <div className={classNames('app', {}, [theme])}>
+    <div className={classNames('app', {}, [])}>
       <Suspense fallback="">
         <MainLayout
           header={<Navbar />}
