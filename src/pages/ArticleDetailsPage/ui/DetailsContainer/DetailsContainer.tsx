@@ -12,7 +12,7 @@ export const DetailsContainer = memo((props: DetailsContainterProps) => {
   const { className, id } = props;
 
   return (
-    <Card max border="m-round" className={className} padding="24">
+    <Card max border="sm-round" className={className} padding="24">
       <ArticleDetails id={id} />
     </Card>
   );

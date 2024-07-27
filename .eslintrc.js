@@ -33,7 +33,7 @@ module.exports = {
     'no-underscore-dangle': 0,
     'i18next/no-literal-string': [2, {
       markupOnly: true,
-      ignoreAttribute: ['data-testid', 'target', 'direction', 'justify', 'gap', 'align', 'role', 'as', 'border', 'wrap', 'variant', 'size'],
+      ignoreAttribute: ['data-testid', 'target', 'direction', 'justify', 'gap', 'align', 'role', 'as', 'border', 'wrap', 'variant', 'size', 'color'],
     }],
     'max-len': [2, { ignoreComments: true, code: 150 }],
     'jsx-a11y/no-static-element-interactions': 0,

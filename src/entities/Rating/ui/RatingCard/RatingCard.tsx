@@ -70,7 +70,7 @@ export const RatingCard = memo((props: RatingCardProps) => {
   );
 
   return (
-    <Card max border="m-round" className={classNames('', {}, [className])} padding="24" data-testid="rating-card">
+    <Card max border="sm-round" className={classNames('', {}, [className])} padding="24" data-testid="rating-card">
       <VStack align="center" gap="8" max>
         <Text
           title={starsCount ? t('thanks_for_review') : title}

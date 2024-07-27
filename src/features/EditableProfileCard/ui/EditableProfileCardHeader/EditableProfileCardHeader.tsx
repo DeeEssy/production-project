@@ -8,6 +8,7 @@ import { Text } from '@/shared/ui/Text';
 import { Button } from '@/shared/ui/Button';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { HStack } from '@/shared/ui/Stack';
+import { Card } from '@/shared/ui/Card';
 
 import { getProfileReadonly } from '../../model/selectors/getProfileReadonly/getProfileReadonly';
 import { getProfileIsLoading } from '../../model/selectors/getProfileIsLoading/getProfileIsLoading';
@@ -40,37 +41,46 @@ export const EditableProfileCardHeader = memo(({ className, id }: EditableProfil
   }, [dispatch, id]);
 
   return (
-    <HStack max justify="between" className={classNames('', {}, [className])}>
-      <Text title={t('profile')} />
-      { isEditable && (
-        readonly
-          ? (
+
+    <Card padding="24" max border="sm-round">
+      <HStack
+        max
+        justify="between"
+        className={classNames('', {}, [className])}
+      >
+        <Text title={t('profile')} />
+        {isEditable && (
+        <div>
+          {readonly ? (
             <Button
               onClick={onEdit}
               data-testid="profile-card-edit-btn"
             >
               {t('edit')}
             </Button>
-          )
-          : (
+          ) : (
             <HStack gap="8">
               <Button
                 onClick={onCancelEdit}
-                disabled={isLoading}
                 data-testid="profile-card-undo-btn"
+                disabled={isLoading}
+                color="error"
               >
                 {t('undo')}
               </Button>
               <Button
                 onClick={onSave}
-                disabled={isLoading}
                 data-testid="profile-card-save-btn"
+                disabled={isLoading}
+                color="success"
               >
                 {t('save')}
               </Button>
             </HStack>
-          )
-      )}
-    </HStack>
+          )}
+        </div>
+        )}
+      </HStack>
+    </Card>
   );
 });

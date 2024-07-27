@@ -43,6 +43,18 @@
   &:hover {
     border: 1px solid var(--accent);
   }
+
+  &.normal {
+    border: 2px solid var(--icon);
+  }
+
+  &.error {
+    border: 2px solid var(--cancel);
+  }
+
+  &.success {
+    border: 2px solid var(--save);
+  }
 }
 
 .filled {
