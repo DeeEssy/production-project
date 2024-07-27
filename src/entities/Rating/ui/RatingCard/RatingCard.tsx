@@ -70,20 +70,31 @@ export const RatingCard = memo((props: RatingCardProps) => {
   );
 
   return (
-    <Card max className={classNames('', {}, [className])} data-testid="rating-card">
+    <Card max border="m-round" className={classNames('', {}, [className])} padding="24" data-testid="rating-card">
       <VStack align="center" gap="8" max>
-        <Text title={starsCount ? t('thanks_for_review') : title} />
-        <StarRating selectedStars={starsCount} size={40} onSelect={onSelectStars} />
+        <Text
+          title={starsCount ? t('thanks_for_review') : title}
+        />
+        <StarRating
+          selectedStars={starsCount}
+          size={40}
+          onSelect={onSelectStars}
+        />
       </VStack>
+
       <BrowserView>
         <Modal isOpen={isModalOpen} lazy>
           <VStack max gap="32">
             {modalContent}
             <HStack max gap="16" justify="end">
-              <Button onClick={cancelHandle} variant="outline">
+              <Button
+                onClick={cancelHandle}
+              >
                 {t('close_review')}
               </Button>
-              <Button onClick={acceptHandle}>
+              <Button
+                onClick={acceptHandle}
+              >
                 {t('send_review')}
               </Button>
             </HStack>
@@ -94,7 +105,11 @@ export const RatingCard = memo((props: RatingCardProps) => {
         <Drawer isOpen={isModalOpen} onClose={cancelHandle}>
           <VStack gap="32">
             {modalContent}
-            <Button fullWidth onClick={acceptHandle} size="l">
+            <Button
+              fullWidth
+              onClick={acceptHandle}
+              size="l"
+            >
               {t('send_review')}
             </Button>
           </VStack>

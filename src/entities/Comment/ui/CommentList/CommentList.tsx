@@ -7,7 +7,6 @@ import { HStack, VStack } from '@/shared/ui/Stack';
 
 import { Comment } from '../Comment/Comment';
 import { Comment as CommentType } from '../../model/types/comment';
-import cls from './CommentList.module.scss';
 
 interface CommentListProps {
     className?: string;
@@ -42,7 +41,7 @@ export const CommentList = memo((props: CommentListProps) => {
             comment={comment}
           />
         ))
-        : <HStack align="center" justify="center" max><Text className={cls.noComments} text={t('no_comments')} /></HStack>}
+        : <HStack align="center" justify="center" max><Text text={t('no_comments')} /></HStack>}
     </VStack>
   );
 });

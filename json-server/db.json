@@ -82,6 +82,25 @@
       "rate": 4,
       "feedback": "test testtest12321312",
       "id": 9
+    },
+    {
+      "userId": 1,
+      "articleId": 4,
+      "rate": 3,
+      "id": 10
+    },
+    {
+      "userId": 1,
+      "articleId": 20,
+      "rate": 3,
+      "feedback": "dsadasdas",
+      "id": 11
+    },
+    {
+      "userId": 1,
+      "articleId": 21,
+      "rate": 3,
+      "id": 12
     }
   ],
   "notifications": [
@@ -1051,6 +1070,18 @@
       "userId": 1,
       "text": "waEDASDASDASDAS",
       "id": 12
+    },
+    {
+      "articleId": 21,
+      "userId": 1,
+      "text": "dasdsads",
+      "id": 13
+    },
+    {
+      "articleId": 21,
+      "userId": 1,
+      "text": "dasdasd",
+      "id": 14
     }
   ],
   "users": [

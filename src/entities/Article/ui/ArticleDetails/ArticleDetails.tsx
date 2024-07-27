@@ -85,11 +85,11 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
   if (isLoading) {
     content = (
       <>
-        <Skeleton className={cls.avatar} width={200} height={200} border="50%" />
-        <Skeleton className={cls.title} width={300} height={32} />
-        <Skeleton className={cls.skeleton} width={600} height={24} />
-        <Skeleton className={cls.skeleton} width="100%" height={200} />
-        <Skeleton className={cls.skeleton} width="100%" height={200} />
+        <Skeleton className={cls.title} height={40} />
+        <Skeleton className={cls.subtitle} height={32} />
+        <Skeleton className={cls.image} height={420} />
+        <Skeleton className={cls.skeleton} width="100%" height={400} />
+        <Skeleton className={cls.skeleton} width="100%" height={400} />
       </>
     );
   } else if (error) {

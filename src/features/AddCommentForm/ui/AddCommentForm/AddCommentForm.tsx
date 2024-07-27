@@ -8,6 +8,7 @@ import { Button } from '@/shared/ui/Button';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { DynamicModuleLoader, ReducerList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { HStack } from '@/shared/ui/Stack';
+import { Card } from '@/shared/ui/Card';
 
 import { addCommentFormActions, addCommentFormReducer } from '../../model/slices/addCommentFormSlice';
 import { getAddCommentFormText } from '../../model/selectors/getAddCommentFormText/getAddCommentFormText';
@@ -39,22 +40,33 @@ const AddCommentForm = memo((props: AddCommentFormProps) => {
 
   return (
     <DynamicModuleLoader reducers={initialReducers}>
-      <HStack max justify="between" className={classNames(cls.addCommentForm, {}, [className])} data-testid="add-comment-form">
-        <Input
-          className={cls.input}
-          placeholder={t('write_your_comment')}
-          value={text}
-          onChange={onCommentTextChange}
-          data-testid="add-comment-form-input"
-        />
-        <Button
-          variant="outline"
-          onClick={onSendHandler}
-          data-testid="add-comment-form-send-button"
+      <Card padding="24" border="sm-round" max>
+        <HStack
+          data-testid="add-comment-form"
+          justify="between"
+          max
+          gap="16"
+          className={classNames(
+            cls.addCommentForm,
+            {},
+            [className],
+          )}
         >
-          {t('send_comment')}
-        </Button>
-      </HStack>
+          <Input
+            className={cls.input}
+            placeholder={t('write_your_comment')}
+            value={text}
+            data-testid="add-comment-form-input"
+            onChange={onCommentTextChange}
+          />
+          <Button
+            data-testid="add-comment-form-send-button"
+            onClick={onSendHandler}
+          >
+            {t('send_comment')}
+          </Button>
+        </HStack>
+      </Card>
     </DynamicModuleLoader>
   );
 });

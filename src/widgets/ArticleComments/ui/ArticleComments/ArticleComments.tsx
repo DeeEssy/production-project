@@ -16,7 +16,6 @@ import { getNormalizeArticleComments } from '../../model/selectors/getNormalizeA
 import { getArticleCommentsIsLoading } from '../../model/selectors/getArticleCommentsIsLoading/getArticleCommentsIsLoading';
 import { getArticleCommentsError } from '../../model/selectors/getArticleCommentsError/getArticleCommentsError';
 import { fetchArticleComments } from '../../model/services/fetchArticleComments';
-import cls from './ArticleComments.module.scss';
 
 interface ArticleCommentsProps {
     className?: string;
@@ -41,10 +40,10 @@ export const ArticleComments = memo(({
   }, [dispatch]);
 
   return (
-    <VStack max gap="16" className={classNames(cls.articleComments, {}, [className])}>
+    <VStack max gap="16" className={classNames('', {}, [className])}>
       {!isLoading && (
       <>
-        <Text size="l" className={classNames(cls.title)} title={t('comments')} />
+        <Text size="l" title={t('comments')} />
         <Suspense fallback={<Loader />}>
           <AddCommentForm onSendComment={onSendComment} />
         </Suspense>
