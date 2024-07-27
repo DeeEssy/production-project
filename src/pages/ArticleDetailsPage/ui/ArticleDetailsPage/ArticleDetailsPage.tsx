@@ -5,15 +5,16 @@ import { Page } from '@/widgets/Page';
 import { ArticleRecommendationsList } from '@/widgets/ArticleRecommendationsList';
 import { ArticleComments } from '@/widgets/ArticleComments';
 import { ArticleRating } from '@/features/ArticleRating';
-import { ArticleDetails } from '@/entities/Article';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { DynamicModuleLoader, ReducerList } from '@/shared/lib';
 import { Loader } from '@/shared/ui/Loader';
 import { VStack } from '@/shared/ui/Stack';
+import { StickyContentLayout } from '@/shared/layouts/StickyContentLayout';
 
 import { articleDetailsPageReducer } from '../../model/slices';
-import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader';
 import cls from './ArticleDetailsPage.module.scss';
+import { DetailsContainer } from '../DetailsContainer/DetailsContainer';
+import { AdditionalInfoContainer } from '../AdditionalInfoContainer/AdditionalInfoContainer';
 
 interface ArticleDetailsPageProps {
     className?: string;
@@ -30,15 +31,25 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
   return (
     <DynamicModuleLoader reducers={initialReducers}>
       <Suspense fallback={<Loader />}>
-        <Page className={classNames(cls.articleDetailsPage, {}, [className])}>
-          <VStack max gap="16">
-            <ArticleDetailsPageHeader />
-            <ArticleDetails id={Number(id)} />
-            <ArticleRating id={Number(id)} />
-            <ArticleRecommendationsList />
-            <ArticleComments id={Number(id)} />
-          </VStack>
-        </Page>
+        <StickyContentLayout
+          content={(
+            <Page
+              className={classNames(
+                cls.articleDetailsPage,
+                {},
+                [className],
+              )}
+            >
+              <VStack gap="16" max>
+                <DetailsContainer id={(Number(id))} />
+                <ArticleRating id={Number(id)} />
+                <ArticleRecommendationsList />
+                <ArticleComments id={Number(id)} />
+              </VStack>
+            </Page>
+          )}
+          right={<AdditionalInfoContainer />}
+        />
       </Suspense>
     </DynamicModuleLoader>
   );

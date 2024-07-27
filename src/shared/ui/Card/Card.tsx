@@ -37,7 +37,9 @@ export const Card = memo((props: CardProps) => {
 
   return (
     <div
-      className={classNames(cls.card, { [cls.max]: max }, [
+      className={classNames(cls.card, {
+        [cls.max]: max,
+      }, [
         className,
         cls[variant],
         cls[paddingClass],

@@ -3,5 +3,6 @@
     "back_to_articles": "Назад",
     "edit": "Редагувати",
     "rate_article": "Оцiнiть статтю",
-    "rate_article_text": "Залиште ваш вiдгук, це допоможе нам покращити якiсть"
+    "rate_article_text": "Залиште ваш вiдгук, це допоможе нам покращити якiсть",
+    "current_views": "{{ value }} переглядiв"
 }
