@@ -1,5 +1,6 @@
-import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 
 import { EditableProfileCardHeader } from './EditableProfileCardHeader';
 
@@ -14,6 +15,15 @@ export default {
 const Template: ComponentStory<typeof EditableProfileCardHeader> = (args) => <EditableProfileCardHeader {...args} />;
 
 export const Light = Template.bind({});
-Light.args = {
+Light.args = {};
+Light.decorators = [StoreDecorator({})];
 
-};
+export const LightEditable = Template.bind({});
+LightEditable.args = { id: 1 };
+LightEditable.decorators = [StoreDecorator({
+  user: {
+    authData: {
+      id: 1,
+    },
+  },
+})];

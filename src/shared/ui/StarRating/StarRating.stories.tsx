@@ -13,5 +13,5 @@ export default {
 
 const Template: ComponentStory<typeof StarRating> = (args) => <StarRating {...args} />;
 
-export const Normal = Template.bind({});
-Normal.args = {};
+export const Light = Template.bind({});
+Light.args = {};

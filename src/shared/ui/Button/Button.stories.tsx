@@ -12,11 +12,6 @@ export default {
 
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
-export const Primary = Template.bind({});
-Primary.args = {
-  children: 'Text',
-};
-
 export const Clear = Template.bind({});
 Clear.args = {
   children: 'Text',
@@ -29,35 +24,22 @@ Outline.args = {
   variant: 'outline',
 };
 
-export const Square = Template.bind({});
-Square.args = {
-  children: '+',
-  variant: 'outline',
-  square: true,
+export const OutlineSuccess = Template.bind({});
+OutlineSuccess.args = {
+  children: 'Text',
+  color: 'success',
 };
 
-export const SquareSizeM = Template.bind({});
-SquareSizeM.args = {
-  children: '+',
-  variant: 'outline',
-  square: true,
-  size: 'm',
+export const OutlineError = Template.bind({});
+OutlineError.args = {
+  children: 'Text',
+  color: 'error',
 };
 
-export const SquareSizeL = Template.bind({});
-SquareSizeL.args = {
-  children: '+',
-  variant: 'outline',
-  square: true,
-  size: 'l',
-};
-
-export const SquareSizeXL = Template.bind({});
-SquareSizeXL.args = {
-  children: '+',
-  variant: 'outline',
-  square: true,
-  size: 'xl',
+export const Filled = Template.bind({});
+Filled.args = {
+  children: 'Text',
+  variant: 'filled',
 };
 
 export const SizeM = Template.bind({});

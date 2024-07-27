@@ -10,7 +10,6 @@ export type ButtonSize = 'm' | 'l' | 'xl';
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
   variant?: ButtonVariant;
-  square?: boolean;
   size?: ButtonSize;
   disabled?: boolean;
   children?: ReactNode;
@@ -25,7 +24,6 @@ export const Button = memo((props: ButtonProps) => {
     className,
     children,
     variant = 'outline',
-    square,
     disabled,
     fullWidth,
     size = 'm',
@@ -36,7 +34,6 @@ export const Button = memo((props: ButtonProps) => {
   } = props;
 
   const mods: Mods = {
-    [cls.square]: square,
     [cls.disabled]: disabled,
     [cls.fullWidth]: fullWidth,
     [cls.withAddon]: Boolean(addonLeft) || Boolean(addonRight),

@@ -1,4 +1,3 @@
-import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { NotificationItem } from './NotificationItem';
@@ -14,4 +13,10 @@ export default {
 const Template: ComponentStory<typeof NotificationItem> = (args) => <NotificationItem {...args} />;
 
 export const Light = Template.bind({});
-Light.args = {};
+Light.args = {
+  item: {
+    id: 1,
+    title: 'title',
+    description: 'description',
+  },
+};

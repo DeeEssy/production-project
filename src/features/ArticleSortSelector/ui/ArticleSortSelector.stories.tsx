@@ -1,5 +1,7 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
+import { ArticleSortField } from '@/entities/Article';
+
 import { ArticleSortSelector } from './ArticleSortSelector';
 
 export default {
@@ -13,4 +15,4 @@ export default {
 const Template: ComponentStory<typeof ArticleSortSelector> = (args) => <ArticleSortSelector {...args} />;
 
 export const Light = Template.bind({});
-Light.args = {};
+Light.args = { sort: ArticleSortField.CREATED, order: 'asc' };
