@@ -6,11 +6,8 @@ import { classNames, DynamicModuleLoader, ReducerList } from '@/shared/lib';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { Text } from '@/shared/ui/Text';
 import { Skeleton } from '@/shared/ui/Skeleton';
-import { Avatar } from '@/shared/ui/Avatar';
-import EyeIcon from '@/shared/assets/icons/eye-20-20.svg';
-import CalendarIcon from '@/shared/assets/icons/calendar-20-20.svg';
-import { Icon } from '@/shared/ui/Icon';
-import { HStack, VStack } from '@/shared/ui/Stack';
+import { VStack } from '@/shared/ui/Stack';
+import { AppImage } from '@/shared/ui/AppImage';
 
 import { getCurrentArticleData } from '../../model/selectors/getCurrentArticleData/getCurrentArticleData';
 import { getCurrentArticleIsLoading }
@@ -105,28 +102,13 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
   } else {
     content = (
       <>
-        <HStack max justify="center" gap="16">
-          <Avatar
-            size={200}
-            src={article?.img}
-            className={cls.avatar}
-          />
-        </HStack>
-        <VStack gap="4" max>
-          <Text
-            title={article?.title}
-            text={article?.subtitle}
-            size="l"
-          />
-          <HStack gap="8" max>
-            <Icon Svg={EyeIcon} />
-            <Text text={String(article?.views)} />
-          </HStack>
-          <HStack gap="8" max>
-            <Icon Svg={CalendarIcon} />
-            <Text text={article?.createdAt} />
-          </HStack>
-        </VStack>
+        <Text title={article?.title} size="l" bold />
+        <Text title={article?.subtitle} />
+        <AppImage
+          fallback={<Skeleton width="100%" height={420} border="16px" />}
+          src={article?.img}
+          className={cls.img}
+        />
         {article?.blocks.map(renderBlock)}
       </>
     );
