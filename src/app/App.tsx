@@ -11,10 +11,12 @@ import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch
 import { MainLayout } from '@/shared/layouts/MainLayout';
 
 import { AppRouter } from './providers/router';
+import { useAppToolbar } from './lib/useAppToolbar';
 
 const App = () => {
   const { theme } = useTheme();
   const dispatch = useAppDispatch();
+  const toolbar = useAppToolbar();
   const inited = useSelector(getUserAuthInited);
 
   useEffect(() => {
@@ -24,7 +26,7 @@ const App = () => {
 
   if (!inited) {
     return (
-      <div className={classNames('app', {}, [theme])}>
+      <div className={classNames('app', {}, [])}>
         <PageLoader />
       </div>
     );
@@ -37,6 +39,7 @@ const App = () => {
           header={<Navbar />}
           content={<AppRouter />}
           sidebar={<Sidebar />}
+          toolbar={toolbar}
         />
       </Suspense>
     </div>
